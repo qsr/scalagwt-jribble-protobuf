@@ -19,10 +19,13 @@ import de.element34.sbteclipsify._
 
 class JribbleProject(info: ProjectInfo) extends DefaultProject(info) with IdeaProject with Eclipsify {
   //val scalaTools = "scala-tools-snapshots" at "http://scala-tools.org/repo-snapshots"
+  val protobuf = "com.google.protobuf" % "protobuf-java" % "2.4.1" withSources()
   val scalaCheck = "org.scala-tools.testing" % "scalacheck_2.9.0" % "1.9" % "test" withSources()
 
   val junit = "junit" % "junit" % "4.8.1" % "test"
   val bryanjswift = "Bryan J Swift Repository" at "http://repos.bryanjswift.com/maven2/"
   val junitInterface = "com.novocode" % "junit-interface" % "0.4.0" % "test"
 
+  override def mainSourceRoots = super.mainSourceRoots +++
+                                 "src" / "main" / "generated"
 }

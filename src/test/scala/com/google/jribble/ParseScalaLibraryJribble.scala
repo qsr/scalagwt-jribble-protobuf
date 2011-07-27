@@ -18,7 +18,9 @@ package com.google.jribble
 import org.junit.Test
 import org.junit.Assert._
 import java.util.jar._
-import java.io.{Reader, InputStreamReader, InputStream}
+import java.io.{Reader, InputStreamReader, InputStream, ByteArrayInputStream}
+import com.google.jribble.ast.{JribbleProtos, JribbleProtoWriter, JribbleProtoReader}
+import com.google.protobuf.{ExtensionRegistry, CodedInputStream}
 
 class ParseScalaLibraryJribble {
   val defParser = new DefParser with CachingDefParser
@@ -39,6 +41,17 @@ class ParseScalaLibraryJribble {
       }
     }
     println("Parsing took %1d milis".format(time2-time1))
+    val time3 = System.currentTimeMillis
+    for((name, node) <- successful) {
+      val message = JribbleProtoWriter.convertDeclaredTypeToMessage(node)
+      val inputStream = CodedInputStream.newInstance(new ByteArrayInputStream(message.toByteArray()))
+      inputStream.setRecursionLimit(Integer.MAX_VALUE)
+      val newMessage = JribbleProtos.DeclaredType.parseFrom(inputStream);
+      assertEquals(message, newMessage);
+      val newNode = JribbleProtoReader.readDeclaredTypeMessage(message)
+      assertEquals("Unable to serialize/deserialize file '" + name + "'", node, newNode);
+    }
+    println("protobuff serialization/deserialization took %1d milis".format(System.currentTimeMillis-time3))
     assertTrue("Failed to parse all jribble files.".format(failed.size), failed.isEmpty)
   }
 

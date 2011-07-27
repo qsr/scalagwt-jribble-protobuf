@@ -1,0 +1,650 @@
+// Generated file.  DO NOT EDIT!.
+package jribble;
+
+option java_package = "com.google.jribble.ast";
+option java_outer_classname = "JribbleProtos";
+
+message AST {
+  extensions 1000 to max;
+  enum MessageType {
+    And = 1;
+    Array = 2;
+    ArrayInitializer = 3;
+    ArrayLength = 4;
+    ArrayRef = 5;
+    Assignment = 6;
+    BinaryOp = 7;
+    BitAnd = 8;
+    BitLShift = 9;
+    BitNot = 10;
+    BitOr = 11;
+    BitRShift = 12;
+    BitUnsignedRShift = 13;
+    BitXor = 14;
+    Block = 15;
+    BooleanLiteral = 16;
+    Break = 17;
+    Cast = 18;
+    CharLiteral = 19;
+    ClassBodyElement = 20;
+    ClassOf = 21;
+    Conditional = 22;
+    Constructor = 23;
+    ConstructorCall = 24;
+    Continue = 25;
+    Divide = 26;
+    DoubleLiteral = 27;
+    Equal = 28;
+    Expression = 29;
+    FieldDef = 30;
+    FieldRef = 31;
+    FloatLiteral = 32;
+    Greater = 33;
+    GreaterOrEqual = 34;
+    If = 35;
+    InstanceOf = 36;
+    IntLiteral = 37;
+    Lesser = 38;
+    LesserOrEqual = 39;
+    Literal = 40;
+    LongLiteral = 41;
+    MethodCall = 42;
+    MethodDef = 43;
+    Minus = 44;
+    Modulus = 45;
+    Multiply = 46;
+    NewArray = 47;
+    NewCall = 48;
+    Not = 49;
+    NotEqual = 50;
+    NullLiteral = 51;
+    Or = 52;
+    Package = 53;
+    ParamDef = 54;
+    Plus = 55;
+    Primitive = 56;
+    Ref = 57;
+    Return = 58;
+    Signature = 59;
+    Statement = 60;
+    StaticFieldRef = 61;
+    StaticMethodCall = 62;
+    StringLiteral = 63;
+    SuperRef = 64;
+    Switch = 65;
+    ThisRef = 66;
+    Throw = 67;
+    Try = 68;
+    Type = 69;
+    UnaryMinus = 70;
+    UnaryOp = 71;
+    VarDef = 72;
+    VarRef = 73;
+    Void = 74;
+    While = 75;
+  }
+  required MessageType type = 1;
+}
+
+message And {
+  extend AST {
+    required And aST = 1000;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message Array {
+  extend AST {
+    required Array aST = 1001;
+  }
+  required AST typ = 2;
+}
+
+message ArrayInitializer {
+  extend AST {
+    required ArrayInitializer aST = 1002;
+  }
+  required AST typ = 2;
+  repeated AST elements = 3;
+}
+
+message ArrayLength {
+  extend AST {
+    required ArrayLength aST = 1003;
+  }
+  required AST on = 2;
+}
+
+message ArrayRef {
+  extend AST {
+    required ArrayRef aST = 1004;
+  }
+  required AST on = 2;
+  required AST index = 3;
+}
+
+message Assignment {
+  extend AST {
+    required Assignment aST = 1005;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message BinaryOp {
+  extend AST {
+    required BinaryOp aST = 1006;
+  }
+  required string symbol = 2;
+}
+
+message BitAnd {
+  extend AST {
+    required BitAnd aST = 1007;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message BitLShift {
+  extend AST {
+    required BitLShift aST = 1008;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message BitNot {
+  extend AST {
+    required BitNot aST = 1009;
+  }
+  required AST expression = 2;
+}
+
+message BitOr {
+  extend AST {
+    required BitOr aST = 1010;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message BitRShift {
+  extend AST {
+    required BitRShift aST = 1011;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message BitUnsignedRShift {
+  extend AST {
+    required BitUnsignedRShift aST = 1012;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message BitXor {
+  extend AST {
+    required BitXor aST = 1013;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message Block {
+  extend AST {
+    required Block aST = 1014;
+  }
+  repeated AST statements = 2;
+}
+
+message BooleanLiteral {
+  extend AST {
+    required BooleanLiteral aST = 1015;
+  }
+  required bool v = 2;
+}
+
+message Break {
+  extend AST {
+    required Break aST = 1016;
+  }
+  optional string label = 2;
+}
+
+message Cast {
+  extend AST {
+    required Cast aST = 1017;
+  }
+  required AST on = 2;
+  required AST typ = 3;
+}
+
+message CharLiteral {
+  extend AST {
+    required CharLiteral aST = 1018;
+  }
+  required int32 v = 2;
+}
+
+message ClassOf {
+  extend AST {
+    required ClassOf aST = 1019;
+  }
+  required AST typ = 2;
+}
+
+message Conditional {
+  extend AST {
+    required Conditional aST = 1020;
+  }
+  required AST condition = 2;
+  required AST typ = 3;
+  required AST then = 4;
+  required AST elsee = 5;
+}
+
+message Constructor {
+  extend AST {
+    required Constructor aST = 1021;
+  }
+  repeated string modifs = 2;
+  required string name = 3;
+  repeated AST params = 4;
+  required AST body = 5;
+}
+
+message ConstructorCall {
+  extend AST {
+    required ConstructorCall aST = 1022;
+  }
+  required AST signature = 2;
+  repeated AST params = 3;
+}
+
+message Continue {
+  extend AST {
+    required Continue aST = 1023;
+  }
+  optional string label = 2;
+}
+
+message Divide {
+  extend AST {
+    required Divide aST = 1024;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message DoubleLiteral {
+  extend AST {
+    required DoubleLiteral aST = 1025;
+  }
+  required double v = 2;
+}
+
+message Equal {
+  extend AST {
+    required Equal aST = 1026;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message FieldDef {
+  extend AST {
+    required FieldDef aST = 1027;
+  }
+  repeated string modifs = 2;
+  required AST typ = 3;
+  required string name = 4;
+  optional AST value = 5;
+}
+
+message FieldRef {
+  extend AST {
+    required FieldRef aST = 1028;
+  }
+  required AST on = 2;
+  required AST onType = 3;
+  required string name = 4;
+}
+
+message FloatLiteral {
+  extend AST {
+    required FloatLiteral aST = 1029;
+  }
+  required float v = 2;
+}
+
+message Greater {
+  extend AST {
+    required Greater aST = 1030;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message GreaterOrEqual {
+  extend AST {
+    required GreaterOrEqual aST = 1031;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message If {
+  extend AST {
+    required If aST = 1032;
+  }
+  required AST condition = 2;
+  required AST then = 3;
+  optional AST elsee = 4;
+}
+
+message InstanceOf {
+  extend AST {
+    required InstanceOf aST = 1033;
+  }
+  required AST on = 2;
+  required AST typ = 3;
+}
+
+message IntLiteral {
+  extend AST {
+    required IntLiteral aST = 1034;
+  }
+  required int32 v = 2;
+}
+
+message Lesser {
+  extend AST {
+    required Lesser aST = 1035;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message LesserOrEqual {
+  extend AST {
+    required LesserOrEqual aST = 1036;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message LongLiteral {
+  extend AST {
+    required LongLiteral aST = 1037;
+  }
+  required int64 v = 2;
+}
+
+message MethodCall {
+  extend AST {
+    required MethodCall aST = 1038;
+  }
+  required AST on = 2;
+  required AST signature = 3;
+  repeated AST params = 4;
+}
+
+message MethodDef {
+  extend AST {
+    required MethodDef aST = 1039;
+  }
+  repeated string modifs = 2;
+  required AST returnType = 3;
+  required string name = 4;
+  repeated AST params = 5;
+  optional AST body = 6;
+}
+
+message Minus {
+  extend AST {
+    required Minus aST = 1040;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message Modulus {
+  extend AST {
+    required Modulus aST = 1041;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message Multiply {
+  extend AST {
+    required Multiply aST = 1042;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message NewArray {
+  extend AST {
+    required NewArray aST = 1043;
+  }
+  required AST typ = 2;
+  repeated group Dims = 3 {
+    optional AST t = 13;
+  }
+}
+
+message NewCall {
+  extend AST {
+    required NewCall aST = 1044;
+  }
+  required AST constructor = 2;
+}
+
+message Not {
+  extend AST {
+    required Not aST = 1045;
+  }
+  required AST expression = 2;
+}
+
+message NotEqual {
+  extend AST {
+    required NotEqual aST = 1046;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message Or {
+  extend AST {
+    required Or aST = 1047;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message Package {
+  extend AST {
+    required Package aST = 1048;
+  }
+  required string name = 2;
+}
+
+message ParamDef {
+  extend AST {
+    required ParamDef aST = 1049;
+  }
+  required string name = 2;
+  required AST typ = 3;
+}
+
+message Plus {
+  extend AST {
+    required Plus aST = 1050;
+  }
+  required AST lhs = 2;
+  required AST rhs = 3;
+}
+
+message Primitive {
+  extend AST {
+    required Primitive aST = 1051;
+  }
+  required string name = 2;
+}
+
+message Ref {
+  extend AST {
+    required Ref aST = 1052;
+  }
+  optional AST pkg = 2;
+  required string name = 3;
+}
+
+message Return {
+  extend AST {
+    required Return aST = 1053;
+  }
+  optional AST expression = 2;
+}
+
+message Signature {
+  extend AST {
+    required Signature aST = 1054;
+  }
+  required AST on = 2;
+  required string name = 3;
+  repeated AST paramTypes = 4;
+  required AST returnType = 5;
+}
+
+message StaticFieldRef {
+  extend AST {
+    required StaticFieldRef aST = 1055;
+  }
+  required AST on = 2;
+  required string name = 3;
+}
+
+message StaticMethodCall {
+  extend AST {
+    required StaticMethodCall aST = 1056;
+  }
+  required AST classRef = 2;
+  required AST signature = 3;
+  repeated AST params = 4;
+}
+
+message StringLiteral {
+  extend AST {
+    required StringLiteral aST = 1057;
+  }
+  required string v = 2;
+}
+
+message Switch {
+  extend AST {
+    required Switch aST = 1058;
+  }
+  required AST expression = 2;
+  repeated group Groups = 3 {
+    required AST t0 = 13;
+    required AST t1 = 23;
+  }
+  optional AST default = 4;
+}
+
+message Throw {
+  extend AST {
+    required Throw aST = 1059;
+  }
+  required AST expression = 2;
+}
+
+message Try {
+  extend AST {
+    required Try aST = 1060;
+  }
+  required AST block = 2;
+  repeated group Catches = 3 {
+    required AST t0 = 13;
+    required string t1 = 23;
+    required AST t2 = 33;
+  }
+  optional AST finalizer = 4;
+}
+
+message UnaryMinus {
+  extend AST {
+    required UnaryMinus aST = 1061;
+  }
+  required AST expression = 2;
+}
+
+message UnaryOp {
+  extend AST {
+    required UnaryOp aST = 1062;
+  }
+  required string symbol = 2;
+}
+
+message VarDef {
+  extend AST {
+    required VarDef aST = 1063;
+  }
+  required AST typ = 2;
+  required string name = 3;
+  optional AST value = 4;
+}
+
+message VarRef {
+  extend AST {
+    required VarRef aST = 1064;
+  }
+  required string name = 2;
+}
+
+message While {
+  extend AST {
+    required While aST = 1065;
+  }
+  optional string label = 2;
+  required AST condition = 3;
+  required AST block = 4;
+}
+
+message DeclaredType {
+  extensions 1000 to max;
+  enum MessageType {
+    ClassDef = 1;
+    InterfaceDef = 2;
+  }
+  required MessageType type = 1;
+}
+
+message ClassDef {
+  extend DeclaredType {
+    required ClassDef declaredType = 1000;
+  }
+  repeated string modifs = 2;
+  required AST name = 3;
+  optional AST ext = 4;
+  repeated AST implements = 5;
+  repeated AST body = 6;
+}
+
+message InterfaceDef {
+  extend DeclaredType {
+    required InterfaceDef declaredType = 1001;
+  }
+  repeated string modifs = 2;
+  required AST name = 3;
+  repeated AST ext = 4;
+  repeated AST body = 5;
+}
+

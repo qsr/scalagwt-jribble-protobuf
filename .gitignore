@@ -7,3 +7,8 @@
 /out
 /.idea/
 /jribbleCache/
+/protobuf-generator/project/boot/
+/protobuf-generator/project/build/target/
+/protobuf-generator/target/
+/lib_managed
+/project/plugins/lib_managed

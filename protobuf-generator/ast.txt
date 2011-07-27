@@ -1,0 +1,79 @@
+AST
+DeclaredType
+Package(name: String) extends AST
+ClassBodyElement extends AST
+ClassDef(modifs: Set[String], name: Ref, ext: Option[Ref], implements: List[Ref], body: List[ClassBodyElement]) extends DeclaredType
+InterfaceDef(modifs: Set[String], name: Ref, ext: List[Ref], body: List[MethodDef]) extends DeclaredType
+ParamDef(name: String, typ: Type) extends AST
+Constructor(modifs: Set[String], name: String, params: List[ParamDef], body: Block) extends ClassBodyElement
+MethodDef(modifs: Set[String], returnType: Type, name: String, params: List[ParamDef], body: Option[Block]) extends ClassBodyElement
+FieldDef(modifs: Set[String], typ: Type, name: String, value: Option[Expression]) extends ClassBodyElement
+Statement extends AST
+Block(statements: List[Statement]) extends Statement
+VarDef(typ: Type, name: String, value: Option[Expression]) extends Statement
+Assignment(lhs: Expression, rhs: Expression) extends Statement
+If(condition: Expression, then: Block, elsee: Option[Block]) extends Statement
+Try(block: Block, catches: List[(Ref, String, Block)], finalizer: Option[Block]) extends Statement
+While(label: Option[String], condition: Expression, block: Block) extends Statement
+Continue(label: Option[String]) extends Statement
+Break(label: Option[String]) extends Statement
+Switch(expression: Expression, groups: List[(Literal, Block)], default: Option[Block]) extends Statement
+Return(expression: Option[Expression]) extends Statement
+Throw(expression: Expression) extends Statement
+ConstructorCall(signature: Signature, params: List[Expression]) extends Statement
+Expression extends Statement
+Literal extends Expression
+BooleanLiteral(v: Boolean) extends Literal
+CharLiteral(v: Char) extends Literal
+DoubleLiteral(v: Double) extends Literal
+FloatLiteral(v: Float) extends Literal
+IntLiteral(v: Int) extends Literal
+LongLiteral(v: Long) extends Literal
+NullLiteral extends Literal
+StringLiteral(v: String) extends Literal
+VarRef(name: String) extends Expression
+ThisRef extends Expression
+SuperRef extends Expression
+ArrayInitializer(typ: Type, elements: List[Expression]) extends Expression
+Signature(on: Ref, name: String, paramTypes: List[Type], returnType: Type) extends AST
+NewCall(constructor: ConstructorCall) extends Expression
+MethodCall(on: Expression, signature: Signature, params: List[Expression]) extends Expression
+StaticMethodCall(classRef: Ref, signature: Signature, params: List[Expression]) extends Expression
+Conditional(condition: Expression, typ: Type, then: Expression, elsee: Expression) extends Expression
+InstanceOf(on: Expression, typ: Type) extends Expression
+Cast(on: Expression, typ: Type) extends Expression
+ClassOf(typ: Type) extends Expression
+FieldRef(on: Expression, onType: Type, name: String) extends Expression
+StaticFieldRef(on: Ref, name: String) extends Expression
+BinaryOp(symbol: String) extends Expression
+Multiply(lhs: Expression, rhs: Expression) extends BinaryOp
+Divide(lhs: Expression, rhs: Expression) extends BinaryOp
+Modulus(lhs: Expression, rhs: Expression) extends BinaryOp
+Minus(lhs: Expression, rhs: Expression) extends BinaryOp
+Plus(lhs: Expression, rhs: Expression) extends BinaryOp
+Greater(lhs: Expression, rhs: Expression) extends BinaryOp
+GreaterOrEqual(lhs: Expression, rhs: Expression) extends BinaryOp
+Lesser(lhs: Expression, rhs: Expression) extends BinaryOp
+LesserOrEqual(lhs: Expression, rhs: Expression) extends BinaryOp
+Equal(lhs: Expression, rhs: Expression) extends BinaryOp
+NotEqual(lhs: Expression, rhs: Expression) extends BinaryOp
+And(lhs: Expression, rhs: Expression) extends BinaryOp
+Or(lhs: Expression, rhs: Expression) extends BinaryOp
+BitLShift(lhs: Expression, rhs: Expression) extends BinaryOp
+BitRShift(lhs: Expression, rhs: Expression) extends BinaryOp
+BitUnsignedRShift(lhs: Expression, rhs: Expression) extends BinaryOp
+BitAnd(lhs: Expression, rhs: Expression) extends BinaryOp
+BitXor(lhs: Expression, rhs: Expression) extends BinaryOp
+BitOr(lhs: Expression, rhs: Expression) extends BinaryOp
+UnaryOp(symbol: String) extends Expression
+Not(expression: Expression) extends UnaryOp
+UnaryMinus(expression: Expression) extends UnaryOp
+BitNot(expression: Expression) extends UnaryOp
+ArrayRef(on: Expression, index: Expression) extends Expression
+NewArray(typ: Type, dims: List[Option[Expression]]) extends Expression
+ArrayLength(on: Expression) extends Expression
+Type extends AST
+Ref(pkg: Option[Package], name: String) extends Type
+Primitive(name: String) extends Type
+Array(typ: Type) extends Type
+Void extends Type
