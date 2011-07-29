@@ -1,0 +1,13 @@
+ To run this project, ensure that you have protoc version 2.4.1 in your path, and type:
+
+$ sbt run "ast.txt ../"
+
+it will generate the following files:
+
+../src/main/protobuf/jribble.proto
+../src/main/generated/com/google/jribble/ast/JribbleProtos.java
+../src/main/scala/com/google/jribble/ast/JribbleProtoReader.scala
+../src/main/scala/com/google/jribble/ast/JribbleProtoWriter.scala
+
+ The input is in the file ast.txt that is a simplified version of
+../src/main/scala/com/google/jribble/ast/AST.scala
