@@ -46,10 +46,8 @@ class ParseScalaLibraryJribble {
       val message = JribbleProtoWriter.convertDeclaredTypeToMessage(node)
       val inputStream = CodedInputStream.newInstance(new ByteArrayInputStream(message.toByteArray()))
       inputStream.setRecursionLimit(Integer.MAX_VALUE)
-      val newMessage = JribbleProtos.DeclaredType.parseFrom(inputStream);
-      assertEquals(message, newMessage);
-      val newNode = JribbleProtoReader.readDeclaredTypeMessage(message)
-      assertEquals("Unable to serialize/deserialize file '" + name + "'", node, newNode);
+      val newNode = JribbleProtoReader.readDeclaredTypeMessage(inputStream)
+      assertEquals("Unable to serialize/deserialize file '" + name + "'", node, newNode)
     }
     println("protobuff serialization/deserialization took %1d milis".format(System.currentTimeMillis-time3))
     assertTrue("Failed to parse all jribble files.".format(failed.size), failed.isEmpty)
