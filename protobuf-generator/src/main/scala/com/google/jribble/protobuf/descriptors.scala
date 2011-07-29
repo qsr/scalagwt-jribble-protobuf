@@ -83,7 +83,7 @@ case class Parameter(name: String, typ: Type) {
   def map(f: Type => Type) = Parameter(name, f(typ))
 }
 
-case class Node(name: String) {
+case class Node(name: String, abstracted: Boolean) {
   var sons: List[Node] = Nil
   var parent: Option[Node] = None
   var params: List[Parameter] = Nil
@@ -97,12 +97,4 @@ case class Node(name: String) {
     case None => this
     case Some(node) => node.head
   }
-  def map(f: Type => Type): Node = {
-    val result = Node(name)
-    result.sons = sons.map(_.map(f))
-    result.parent = parent
-    result.params = params.map(_.map(f))
-    result
-  }
-
 }

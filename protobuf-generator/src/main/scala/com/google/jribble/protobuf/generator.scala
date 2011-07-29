@@ -52,7 +52,7 @@ object Generator {
     val heads = nodes.filter(_.parent == None)
 
     for(head <- heads) {
-      val subHead = nodes.filter(n => n.head == head && n != head)
+      val subHead = nodes.filter(n => n.head == head && n != head && ! n.abstracted)
       proto.append("message " + head.name + " {\n")
       proto.append("  extensions 1000 to max;\n")
       proto.append("  enum MessageType {\n")
@@ -108,7 +108,7 @@ object Generator {
 
   def simpleTypeToMessage(simpleType: SimpleType, path: String): String = {
     simpleType match {
-      case RefType(node) => "convert" + node.name + "ToMessage(" + path + ")"
+      case RefType(node) => "convert" + node.head.name + "ToMessage(" + path + ")"
       case PrimitiveType(_) => path
     }
   }
@@ -146,7 +146,7 @@ object Generator {
         reader.append("  }\n");
       }
       reader.append("  def read" + head.name + "Message(message: " + protoFQCN + "." + head.name + "): " + astPackage + "." + head.name + " = {\n")
-      val subHead = nodes.filter(n => n.head == head && n.sons.isEmpty)
+      val subHead = nodes.filter(n => n.head == head && !n.abstracted)
       reader.append("    message.getType() match {\n")
       for(node <- subHead) {
         reader.append("      case " + protoFQCN + "." + head.name + ".MessageType." + node.name + " =>\n")
@@ -200,31 +200,30 @@ object Generator {
     writer.append("object JribbleProtoWriter {\n")
 
     for(node <- nodes) {
-      if(node.sons.isEmpty && node.params.isEmpty) {
-        writer.append("  def convert" + node.name + "ToMessage(): " + protoFQCN + "." + node.head.name + " = {\n")
-          writer.append("    val message = convertSpecific" + node.head.name + "ToMessage(" + astPackage + "." + node.name + ")\n")
-          writer.append("    message.setType(" + protoFQCN + "." + node.head.name + ".MessageType." + node.name + ")\n")
-          writer.append("    message.build()\n");
-        writer.append("  }\n")
-      } else {
+      if(node.parent == None) {
+        def subNode = nodes.filter(n => n.head == node && !n.abstracted)
         writer.append("  def convert" + node.name + "ToMessage(element: " + astPackage + "." + node.name + "): " + protoFQCN + "." + node.head.name + " = {\n")
-        if(!node.sons.isEmpty) {
-          writer.append("    element match {\n")
-          for(subNode <- node.sons) {
-            if(subNode.sons.isEmpty && subNode.params.isEmpty) {
-              writer.append("      case " + astPackage + "." + subNode.name + " => convert" + subNode.name + "ToMessage()\n")
-            } else {
-              writer.append("      case subElement: " + astPackage + "." + subNode.name + " => convert" + subNode.name + "ToMessage(subElement)\n")
-            }
+        writer.append("    element match {\n")
+        for(subNode <- subNode) {
+          if(subNode.params.isEmpty) {
+            writer.append("      case " + astPackage + "." + subNode.name + " => convert" + subNode.name + "ToMessageBuilder().build()\n")
+          } else {
+            writer.append("      case subElement: " + astPackage + "." + subNode.name + " => convert" + subNode.name + "ToMessageBuilder(subElement).build()\n")
           }
-          writer.append("      case _ => convertSpecific" + node.name + "ToMessage(element).build()\n")
-          writer.append("    }\n")
-        } else {
-          writer.append("    convertSpecific" + node.name + "ToMessage(element).build()\n")
         }
+        writer.append("    }\n")
         writer.append("  }\n")
-        writer.append("  private def convertSpecific" + node.name + "ToMessage(element: " + astPackage + "." + node.name + "): " + protoFQCN + "." + node.head.name + ".Builder = {\n")
-        if(!node.params.isEmpty || node.parent == None) {
+      } else if(!node.abstracted) {
+        val head = node.head
+// Start
+        if(node.params.isEmpty) {
+          writer.append("  private def convert" + node.name + "ToMessageBuilder() = {\n")
+          writer.append("    val message = " + protoFQCN + "." + head.name + ".newBuilder()\n")
+          writer.append("    message.setType(" + protoFQCN + "." + head.name + ".MessageType." + node.name + ")\n")
+          writer.append("    message\n");
+          writer.append("  }\n")
+        } else {
+          writer.append("  private def convert" + node.name + "ToMessageBuilder(element: " + astPackage + "." + node.name + ") = {\n")
           writer.append("    val message = " + protoFQCN + "." + node.name + ".newBuilder()\n")
           for(param <- node.params) {
             param.typ match {
@@ -258,22 +257,14 @@ object Generator {
                 writer.append("    }\n")
             }
           }
-        }
-        if(node.parent != None) {
-          val head = node.head
-          writer.append("    val headMessage = convertSpecific" + head.name + "ToMessage(element)\n")
+          writer.append("    val headMessage = " + protoFQCN + "." + head.name + ".newBuilder()\n")
           writer.append("    headMessage.setType(" + protoFQCN + "." + head.name + ".MessageType." + node.name + ")\n")
-          if(!node.params.isEmpty) {
-            writer.append("    headMessage.setExtension(" + protoFQCN + "." + node.name + "." + decapitalize(head.name) +", message.build())\n")
-          }
+          writer.append("    headMessage.setExtension(" + protoFQCN + "." + node.name + "." + decapitalize(head.name) +", message.build())\n")
           writer.append("    headMessage\n")
-        } else {
-          writer.append("    message\n")
+          writer.append("  }\n")
         }
-        writer.append("  }\n")
       }
     }
-
     writer.append("}\n")
 
     writer.toString
@@ -286,6 +277,7 @@ object Generator {
 
     val scalaSubdir = new File(scalaSrc, astPackage.replace(".", "/"))
     protoDir.mkdirs
+    javaSrc.mkdirs
     scalaSubdir.mkdirs
 
     // Protobuf generation

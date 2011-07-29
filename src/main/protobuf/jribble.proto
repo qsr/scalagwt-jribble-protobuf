@@ -13,75 +13,68 @@ message AST {
     ArrayLength = 4;
     ArrayRef = 5;
     Assignment = 6;
-    BinaryOp = 7;
-    BitAnd = 8;
-    BitLShift = 9;
-    BitNot = 10;
-    BitOr = 11;
-    BitRShift = 12;
-    BitUnsignedRShift = 13;
-    BitXor = 14;
-    Block = 15;
-    BooleanLiteral = 16;
-    Break = 17;
-    Cast = 18;
-    CharLiteral = 19;
-    ClassBodyElement = 20;
-    ClassOf = 21;
-    Conditional = 22;
-    Constructor = 23;
-    ConstructorCall = 24;
-    Continue = 25;
-    Divide = 26;
-    DoubleLiteral = 27;
-    Equal = 28;
-    Expression = 29;
-    FieldDef = 30;
-    FieldRef = 31;
-    FloatLiteral = 32;
-    Greater = 33;
-    GreaterOrEqual = 34;
-    If = 35;
-    InstanceOf = 36;
-    IntLiteral = 37;
-    Lesser = 38;
-    LesserOrEqual = 39;
-    Literal = 40;
-    LongLiteral = 41;
-    MethodCall = 42;
-    MethodDef = 43;
-    Minus = 44;
-    Modulus = 45;
-    Multiply = 46;
-    NewArray = 47;
-    NewCall = 48;
-    Not = 49;
-    NotEqual = 50;
-    NullLiteral = 51;
-    Or = 52;
-    Package = 53;
-    ParamDef = 54;
-    Plus = 55;
-    Primitive = 56;
-    Ref = 57;
-    Return = 58;
-    Signature = 59;
-    Statement = 60;
-    StaticFieldRef = 61;
-    StaticMethodCall = 62;
-    StringLiteral = 63;
-    SuperRef = 64;
-    Switch = 65;
-    ThisRef = 66;
-    Throw = 67;
-    Try = 68;
-    Type = 69;
-    UnaryMinus = 70;
-    UnaryOp = 71;
-    VarDef = 72;
-    VarRef = 73;
-    Void = 74;
-    While = 75;
+    BitAnd = 7;
+    BitLShift = 8;
+    BitNot = 9;
+    BitOr = 10;
+    BitRShift = 11;
+    BitUnsignedRShift = 12;
+    BitXor = 13;
+    Block = 14;
+    BooleanLiteral = 15;
+    Break = 16;
+    Cast = 17;
+    CharLiteral = 18;
+    ClassOf = 19;
+    Conditional = 20;
+    Constructor = 21;
+    ConstructorCall = 22;
+    Continue = 23;
+    Divide = 24;
+    DoubleLiteral = 25;
+    Equal = 26;
+    FieldDef = 27;
+    FieldRef = 28;
+    FloatLiteral = 29;
+    Greater = 30;
+    GreaterOrEqual = 31;
+    If = 32;
+    InstanceOf = 33;
+    IntLiteral = 34;
+    Lesser = 35;
+    LesserOrEqual = 36;
+    LongLiteral = 37;
+    MethodCall = 38;
+    MethodDef = 39;
+    Minus = 40;
+    Modulus = 41;
+    Multiply = 42;
+    NewArray = 43;
+    NewCall = 44;
+    Not = 45;
+    NotEqual = 46;
+    NullLiteral = 47;
+    Or = 48;
+    Package = 49;
+    ParamDef = 50;
+    Plus = 51;
+    Primitive = 52;
+    Ref = 53;
+    Return = 54;
+    Signature = 55;
+    StaticFieldRef = 56;
+    StaticMethodCall = 57;
+    StringLiteral = 58;
+    SuperRef = 59;
+    Switch = 60;
+    ThisRef = 61;
+    Throw = 62;
+    Try = 63;
+    UnaryMinus = 64;
+    VarDef = 65;
+    VarRef = 66;
+    Void = 67;
+    While = 68;
   }
   required MessageType type = 1;
 }
@@ -132,16 +125,9 @@ message Assignment {
   required AST rhs = 3;
 }
 
-message BinaryOp {
-  extend AST {
-    required BinaryOp aST = 1006;
-  }
-  required string symbol = 2;
-}
-
 message BitAnd {
   extend AST {
-    required BitAnd aST = 1007;
+    required BitAnd aST = 1006;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -149,7 +135,7 @@ message BitAnd {
 
 message BitLShift {
   extend AST {
-    required BitLShift aST = 1008;
+    required BitLShift aST = 1007;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -157,14 +143,14 @@ message BitLShift {
 
 message BitNot {
   extend AST {
-    required BitNot aST = 1009;
+    required BitNot aST = 1008;
   }
   required AST expression = 2;
 }
 
 message BitOr {
   extend AST {
-    required BitOr aST = 1010;
+    required BitOr aST = 1009;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -172,7 +158,7 @@ message BitOr {
 
 message BitRShift {
   extend AST {
-    required BitRShift aST = 1011;
+    required BitRShift aST = 1010;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -180,7 +166,7 @@ message BitRShift {
 
 message BitUnsignedRShift {
   extend AST {
-    required BitUnsignedRShift aST = 1012;
+    required BitUnsignedRShift aST = 1011;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -188,7 +174,7 @@ message BitUnsignedRShift {
 
 message BitXor {
   extend AST {
-    required BitXor aST = 1013;
+    required BitXor aST = 1012;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -196,28 +182,28 @@ message BitXor {
 
 message Block {
   extend AST {
-    required Block aST = 1014;
+    required Block aST = 1013;
   }
   repeated AST statements = 2;
 }
 
 message BooleanLiteral {
   extend AST {
-    required BooleanLiteral aST = 1015;
+    required BooleanLiteral aST = 1014;
   }
   required bool v = 2;
 }
 
 message Break {
   extend AST {
-    required Break aST = 1016;
+    required Break aST = 1015;
   }
   optional string label = 2;
 }
 
 message Cast {
   extend AST {
-    required Cast aST = 1017;
+    required Cast aST = 1016;
   }
   required AST on = 2;
   required AST typ = 3;
@@ -225,21 +211,21 @@ message Cast {
 
 message CharLiteral {
   extend AST {
-    required CharLiteral aST = 1018;
+    required CharLiteral aST = 1017;
   }
   required int32 v = 2;
 }
 
 message ClassOf {
   extend AST {
-    required ClassOf aST = 1019;
+    required ClassOf aST = 1018;
   }
   required AST typ = 2;
 }
 
 message Conditional {
   extend AST {
-    required Conditional aST = 1020;
+    required Conditional aST = 1019;
   }
   required AST condition = 2;
   required AST typ = 3;
@@ -249,7 +235,7 @@ message Conditional {
 
 message Constructor {
   extend AST {
-    required Constructor aST = 1021;
+    required Constructor aST = 1020;
   }
   repeated string modifs = 2;
   required string name = 3;
@@ -259,7 +245,7 @@ message Constructor {
 
 message ConstructorCall {
   extend AST {
-    required ConstructorCall aST = 1022;
+    required ConstructorCall aST = 1021;
   }
   required AST signature = 2;
   repeated AST params = 3;
@@ -267,14 +253,14 @@ message ConstructorCall {
 
 message Continue {
   extend AST {
-    required Continue aST = 1023;
+    required Continue aST = 1022;
   }
   optional string label = 2;
 }
 
 message Divide {
   extend AST {
-    required Divide aST = 1024;
+    required Divide aST = 1023;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -282,14 +268,14 @@ message Divide {
 
 message DoubleLiteral {
   extend AST {
-    required DoubleLiteral aST = 1025;
+    required DoubleLiteral aST = 1024;
   }
   required double v = 2;
 }
 
 message Equal {
   extend AST {
-    required Equal aST = 1026;
+    required Equal aST = 1025;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -297,7 +283,7 @@ message Equal {
 
 message FieldDef {
   extend AST {
-    required FieldDef aST = 1027;
+    required FieldDef aST = 1026;
   }
   repeated string modifs = 2;
   required AST typ = 3;
@@ -307,7 +293,7 @@ message FieldDef {
 
 message FieldRef {
   extend AST {
-    required FieldRef aST = 1028;
+    required FieldRef aST = 1027;
   }
   required AST on = 2;
   required AST onType = 3;
@@ -316,14 +302,14 @@ message FieldRef {
 
 message FloatLiteral {
   extend AST {
-    required FloatLiteral aST = 1029;
+    required FloatLiteral aST = 1028;
   }
   required float v = 2;
 }
 
 message Greater {
   extend AST {
-    required Greater aST = 1030;
+    required Greater aST = 1029;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -331,7 +317,7 @@ message Greater {
 
 message GreaterOrEqual {
   extend AST {
-    required GreaterOrEqual aST = 1031;
+    required GreaterOrEqual aST = 1030;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -339,7 +325,7 @@ message GreaterOrEqual {
 
 message If {
   extend AST {
-    required If aST = 1032;
+    required If aST = 1031;
   }
   required AST condition = 2;
   required AST then = 3;
@@ -348,7 +334,7 @@ message If {
 
 message InstanceOf {
   extend AST {
-    required InstanceOf aST = 1033;
+    required InstanceOf aST = 1032;
   }
   required AST on = 2;
   required AST typ = 3;
@@ -356,14 +342,14 @@ message InstanceOf {
 
 message IntLiteral {
   extend AST {
-    required IntLiteral aST = 1034;
+    required IntLiteral aST = 1033;
   }
   required int32 v = 2;
 }
 
 message Lesser {
   extend AST {
-    required Lesser aST = 1035;
+    required Lesser aST = 1034;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -371,7 +357,7 @@ message Lesser {
 
 message LesserOrEqual {
   extend AST {
-    required LesserOrEqual aST = 1036;
+    required LesserOrEqual aST = 1035;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -379,14 +365,14 @@ message LesserOrEqual {
 
 message LongLiteral {
   extend AST {
-    required LongLiteral aST = 1037;
+    required LongLiteral aST = 1036;
   }
   required int64 v = 2;
 }
 
 message MethodCall {
   extend AST {
-    required MethodCall aST = 1038;
+    required MethodCall aST = 1037;
   }
   required AST on = 2;
   required AST signature = 3;
@@ -395,7 +381,7 @@ message MethodCall {
 
 message MethodDef {
   extend AST {
-    required MethodDef aST = 1039;
+    required MethodDef aST = 1038;
   }
   repeated string modifs = 2;
   required AST returnType = 3;
@@ -406,7 +392,7 @@ message MethodDef {
 
 message Minus {
   extend AST {
-    required Minus aST = 1040;
+    required Minus aST = 1039;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -414,7 +400,7 @@ message Minus {
 
 message Modulus {
   extend AST {
-    required Modulus aST = 1041;
+    required Modulus aST = 1040;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -422,7 +408,7 @@ message Modulus {
 
 message Multiply {
   extend AST {
-    required Multiply aST = 1042;
+    required Multiply aST = 1041;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -430,7 +416,7 @@ message Multiply {
 
 message NewArray {
   extend AST {
-    required NewArray aST = 1043;
+    required NewArray aST = 1042;
   }
   required AST typ = 2;
   repeated group Dims = 3 {
@@ -440,21 +426,21 @@ message NewArray {
 
 message NewCall {
   extend AST {
-    required NewCall aST = 1044;
+    required NewCall aST = 1043;
   }
   required AST constructor = 2;
 }
 
 message Not {
   extend AST {
-    required Not aST = 1045;
+    required Not aST = 1044;
   }
   required AST expression = 2;
 }
 
 message NotEqual {
   extend AST {
-    required NotEqual aST = 1046;
+    required NotEqual aST = 1045;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -462,7 +448,7 @@ message NotEqual {
 
 message Or {
   extend AST {
-    required Or aST = 1047;
+    required Or aST = 1046;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -470,14 +456,14 @@ message Or {
 
 message Package {
   extend AST {
-    required Package aST = 1048;
+    required Package aST = 1047;
   }
   required string name = 2;
 }
 
 message ParamDef {
   extend AST {
-    required ParamDef aST = 1049;
+    required ParamDef aST = 1048;
   }
   required string name = 2;
   required AST typ = 3;
@@ -485,7 +471,7 @@ message ParamDef {
 
 message Plus {
   extend AST {
-    required Plus aST = 1050;
+    required Plus aST = 1049;
   }
   required AST lhs = 2;
   required AST rhs = 3;
@@ -493,14 +479,14 @@ message Plus {
 
 message Primitive {
   extend AST {
-    required Primitive aST = 1051;
+    required Primitive aST = 1050;
   }
   required string name = 2;
 }
 
 message Ref {
   extend AST {
-    required Ref aST = 1052;
+    required Ref aST = 1051;
   }
   optional AST pkg = 2;
   required string name = 3;
@@ -508,14 +494,14 @@ message Ref {
 
 message Return {
   extend AST {
-    required Return aST = 1053;
+    required Return aST = 1052;
   }
   optional AST expression = 2;
 }
 
 message Signature {
   extend AST {
-    required Signature aST = 1054;
+    required Signature aST = 1053;
   }
   required AST on = 2;
   required string name = 3;
@@ -525,7 +511,7 @@ message Signature {
 
 message StaticFieldRef {
   extend AST {
-    required StaticFieldRef aST = 1055;
+    required StaticFieldRef aST = 1054;
   }
   required AST on = 2;
   required string name = 3;
@@ -533,7 +519,7 @@ message StaticFieldRef {
 
 message StaticMethodCall {
   extend AST {
-    required StaticMethodCall aST = 1056;
+    required StaticMethodCall aST = 1055;
   }
   required AST classRef = 2;
   required AST signature = 3;
@@ -542,14 +528,14 @@ message StaticMethodCall {
 
 message StringLiteral {
   extend AST {
-    required StringLiteral aST = 1057;
+    required StringLiteral aST = 1056;
   }
   required string v = 2;
 }
 
 message Switch {
   extend AST {
-    required Switch aST = 1058;
+    required Switch aST = 1057;
   }
   required AST expression = 2;
   repeated group Groups = 3 {
@@ -561,14 +547,14 @@ message Switch {
 
 message Throw {
   extend AST {
-    required Throw aST = 1059;
+    required Throw aST = 1058;
   }
   required AST expression = 2;
 }
 
 message Try {
   extend AST {
-    required Try aST = 1060;
+    required Try aST = 1059;
   }
   required AST block = 2;
   repeated group Catches = 3 {
@@ -581,21 +567,14 @@ message Try {
 
 message UnaryMinus {
   extend AST {
-    required UnaryMinus aST = 1061;
+    required UnaryMinus aST = 1060;
   }
   required AST expression = 2;
 }
 
-message UnaryOp {
-  extend AST {
-    required UnaryOp aST = 1062;
-  }
-  required string symbol = 2;
-}
-
 message VarDef {
   extend AST {
-    required VarDef aST = 1063;
+    required VarDef aST = 1061;
   }
   required AST typ = 2;
   required string name = 3;
@@ -604,14 +583,14 @@ message VarDef {
 
 message VarRef {
   extend AST {
-    required VarRef aST = 1064;
+    required VarRef aST = 1062;
   }
   required string name = 2;
 }
 
 message While {
   extend AST {
-    required While aST = 1065;
+    required While aST = 1063;
   }
   optional string label = 2;
   required AST condition = 3;

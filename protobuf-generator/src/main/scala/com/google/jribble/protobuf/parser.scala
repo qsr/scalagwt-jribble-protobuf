@@ -21,18 +21,20 @@ import scala.util.parsing.combinator.RegexParsers
 
 case class NodeDeclaration(id: String,
                            params: List[Parameter],
-                           extension: Option[String])
+                           extension: Option[String],
+                           abstracted: Boolean)
 
 object SimpleAstParser extends RegexParsers {
   val ID = """[a-zA-Z]+""".r
   
   def ast = nodeDeclaration*
 
-  def nodeDeclaration = ID ~ opt(params) ~ opt(extension) ^^
-      { case a~b~c =>
-        NodeDeclaration(a,
-                        b.getOrElse(Nil),
-                        c.map(e => Some(e)).getOrElse(None))
+  def nodeDeclaration = opt("abstract ") ~ ID ~ opt(params) ~ opt(extension) ^^
+      { case a~b~c~d =>
+        NodeDeclaration(b,
+                        c.getOrElse(Nil),
+                        d.map(e => Some(e)).getOrElse(None),
+                        a.map(_ => true).getOrElse(false))
       }
 
   def extension = "extends" ~> ID ^^ 
@@ -94,7 +96,7 @@ object SimpleAstParser extends RegexParsers {
         case _ => System.err.println("Unable to parse: " + line); None
       }}
     } toList) flatten
-    val nodeMap = Map[String, Node]() ++ { for(nd <- defs) yield (nd.id, Node(nd.id)) }
+    val nodeMap = Map[String, Node]() ++ { for(nd <- defs) yield (nd.id, Node(nd.id, nd.abstracted)) }
     for(nd <- defs) {
       for(node <- nodeMap.get(nd.id);
           parent <- nd.extension;

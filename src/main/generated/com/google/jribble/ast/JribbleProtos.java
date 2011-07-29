@@ -13,7 +13,6 @@ public final class JribbleProtos {
     registry.add(com.google.jribble.ast.JribbleProtos.ArrayLength.aST);
     registry.add(com.google.jribble.ast.JribbleProtos.ArrayRef.aST);
     registry.add(com.google.jribble.ast.JribbleProtos.Assignment.aST);
-    registry.add(com.google.jribble.ast.JribbleProtos.BinaryOp.aST);
     registry.add(com.google.jribble.ast.JribbleProtos.BitAnd.aST);
     registry.add(com.google.jribble.ast.JribbleProtos.BitLShift.aST);
     registry.add(com.google.jribble.ast.JribbleProtos.BitNot.aST);
@@ -69,7 +68,6 @@ public final class JribbleProtos {
     registry.add(com.google.jribble.ast.JribbleProtos.Throw.aST);
     registry.add(com.google.jribble.ast.JribbleProtos.Try.aST);
     registry.add(com.google.jribble.ast.JribbleProtos.UnaryMinus.aST);
-    registry.add(com.google.jribble.ast.JribbleProtos.UnaryOp.aST);
     registry.add(com.google.jribble.ast.JribbleProtos.VarDef.aST);
     registry.add(com.google.jribble.ast.JribbleProtos.VarRef.aST);
     registry.add(com.google.jribble.ast.JribbleProtos.While.aST);
@@ -120,75 +118,68 @@ public final class JribbleProtos {
       ArrayLength(3, 4),
       ArrayRef(4, 5),
       Assignment(5, 6),
-      BinaryOp(6, 7),
-      BitAnd(7, 8),
-      BitLShift(8, 9),
-      BitNot(9, 10),
-      BitOr(10, 11),
-      BitRShift(11, 12),
-      BitUnsignedRShift(12, 13),
-      BitXor(13, 14),
-      Block(14, 15),
-      BooleanLiteral(15, 16),
-      Break(16, 17),
-      Cast(17, 18),
-      CharLiteral(18, 19),
-      ClassBodyElement(19, 20),
-      ClassOf(20, 21),
-      Conditional(21, 22),
-      Constructor(22, 23),
-      ConstructorCall(23, 24),
-      Continue(24, 25),
-      Divide(25, 26),
-      DoubleLiteral(26, 27),
-      Equal(27, 28),
-      Expression(28, 29),
-      FieldDef(29, 30),
-      FieldRef(30, 31),
-      FloatLiteral(31, 32),
-      Greater(32, 33),
-      GreaterOrEqual(33, 34),
-      If(34, 35),
-      InstanceOf(35, 36),
-      IntLiteral(36, 37),
-      Lesser(37, 38),
-      LesserOrEqual(38, 39),
-      Literal(39, 40),
-      LongLiteral(40, 41),
-      MethodCall(41, 42),
-      MethodDef(42, 43),
-      Minus(43, 44),
-      Modulus(44, 45),
-      Multiply(45, 46),
-      NewArray(46, 47),
-      NewCall(47, 48),
-      Not(48, 49),
-      NotEqual(49, 50),
-      NullLiteral(50, 51),
-      Or(51, 52),
-      Package(52, 53),
-      ParamDef(53, 54),
-      Plus(54, 55),
-      Primitive(55, 56),
-      Ref(56, 57),
-      Return(57, 58),
-      Signature(58, 59),
-      Statement(59, 60),
-      StaticFieldRef(60, 61),
-      StaticMethodCall(61, 62),
-      StringLiteral(62, 63),
-      SuperRef(63, 64),
-      Switch(64, 65),
-      ThisRef(65, 66),
-      Throw(66, 67),
-      Try(67, 68),
-      Type(68, 69),
-      UnaryMinus(69, 70),
-      UnaryOp(70, 71),
-      VarDef(71, 72),
-      VarRef(72, 73),
-      Void(73, 74),
-      While(74, 75),
+      BitAnd(6, 7),
+      BitLShift(7, 8),
+      BitNot(8, 9),
+      BitOr(9, 10),
+      BitRShift(10, 11),
+      BitUnsignedRShift(11, 12),
+      BitXor(12, 13),
+      Block(13, 14),
+      BooleanLiteral(14, 15),
+      Break(15, 16),
+      Cast(16, 17),
+      CharLiteral(17, 18),
+      ClassOf(18, 19),
+      Conditional(19, 20),
+      Constructor(20, 21),
+      ConstructorCall(21, 22),
+      Continue(22, 23),
+      Divide(23, 24),
+      DoubleLiteral(24, 25),
+      Equal(25, 26),
+      FieldDef(26, 27),
+      FieldRef(27, 28),
+      FloatLiteral(28, 29),
+      Greater(29, 30),
+      GreaterOrEqual(30, 31),
+      If(31, 32),
+      InstanceOf(32, 33),
+      IntLiteral(33, 34),
+      Lesser(34, 35),
+      LesserOrEqual(35, 36),
+      LongLiteral(36, 37),
+      MethodCall(37, 38),
+      MethodDef(38, 39),
+      Minus(39, 40),
+      Modulus(40, 41),
+      Multiply(41, 42),
+      NewArray(42, 43),
+      NewCall(43, 44),
+      Not(44, 45),
+      NotEqual(45, 46),
+      NullLiteral(46, 47),
+      Or(47, 48),
+      Package(48, 49),
+      ParamDef(49, 50),
+      Plus(50, 51),
+      Primitive(51, 52),
+      Ref(52, 53),
+      Return(53, 54),
+      Signature(54, 55),
+      StaticFieldRef(55, 56),
+      StaticMethodCall(56, 57),
+      StringLiteral(57, 58),
+      SuperRef(58, 59),
+      Switch(59, 60),
+      ThisRef(60, 61),
+      Throw(61, 62),
+      Try(62, 63),
+      UnaryMinus(63, 64),
+      VarDef(64, 65),
+      VarRef(65, 66),
+      Void(66, 67),
+      While(67, 68),
       ;
       
       public static final int And_VALUE = 1;
@@ -197,75 +188,68 @@ public final class JribbleProtos {
       public static final int ArrayLength_VALUE = 4;
       public static final int ArrayRef_VALUE = 5;
       public static final int Assignment_VALUE = 6;
-      public static final int BinaryOp_VALUE = 7;
-      public static final int BitAnd_VALUE = 8;
-      public static final int BitLShift_VALUE = 9;
-      public static final int BitNot_VALUE = 10;
-      public static final int BitOr_VALUE = 11;
-      public static final int BitRShift_VALUE = 12;
-      public static final int BitUnsignedRShift_VALUE = 13;
-      public static final int BitXor_VALUE = 14;
-      public static final int Block_VALUE = 15;
-      public static final int BooleanLiteral_VALUE = 16;
-      public static final int Break_VALUE = 17;
-      public static final int Cast_VALUE = 18;
-      public static final int CharLiteral_VALUE = 19;
-      public static final int ClassBodyElement_VALUE = 20;
-      public static final int ClassOf_VALUE = 21;
-      public static final int Conditional_VALUE = 22;
-      public static final int Constructor_VALUE = 23;
-      public static final int ConstructorCall_VALUE = 24;
-      public static final int Continue_VALUE = 25;
-      public static final int Divide_VALUE = 26;
-      public static final int DoubleLiteral_VALUE = 27;
-      public static final int Equal_VALUE = 28;
-      public static final int Expression_VALUE = 29;
-      public static final int FieldDef_VALUE = 30;
-      public static final int FieldRef_VALUE = 31;
-      public static final int FloatLiteral_VALUE = 32;
-      public static final int Greater_VALUE = 33;
-      public static final int GreaterOrEqual_VALUE = 34;
-      public static final int If_VALUE = 35;
-      public static final int InstanceOf_VALUE = 36;
-      public static final int IntLiteral_VALUE = 37;
-      public static final int Lesser_VALUE = 38;
-      public static final int LesserOrEqual_VALUE = 39;
-      public static final int Literal_VALUE = 40;
-      public static final int LongLiteral_VALUE = 41;
-      public static final int MethodCall_VALUE = 42;
-      public static final int MethodDef_VALUE = 43;
-      public static final int Minus_VALUE = 44;
-      public static final int Modulus_VALUE = 45;
-      public static final int Multiply_VALUE = 46;
-      public static final int NewArray_VALUE = 47;
-      public static final int NewCall_VALUE = 48;
-      public static final int Not_VALUE = 49;
-      public static final int NotEqual_VALUE = 50;
-      public static final int NullLiteral_VALUE = 51;
-      public static final int Or_VALUE = 52;
-      public static final int Package_VALUE = 53;
-      public static final int ParamDef_VALUE = 54;
-      public static final int Plus_VALUE = 55;
-      public static final int Primitive_VALUE = 56;
-      public static final int Ref_VALUE = 57;
-      public static final int Return_VALUE = 58;
-      public static final int Signature_VALUE = 59;
-      public static final int Statement_VALUE = 60;
-      public static final int StaticFieldRef_VALUE = 61;
-      public static final int StaticMethodCall_VALUE = 62;
-      public static final int StringLiteral_VALUE = 63;
-      public static final int SuperRef_VALUE = 64;
-      public static final int Switch_VALUE = 65;
-      public static final int ThisRef_VALUE = 66;
-      public static final int Throw_VALUE = 67;
-      public static final int Try_VALUE = 68;
-      public static final int Type_VALUE = 69;
-      public static final int UnaryMinus_VALUE = 70;
-      public static final int UnaryOp_VALUE = 71;
-      public static final int VarDef_VALUE = 72;
-      public static final int VarRef_VALUE = 73;
-      public static final int Void_VALUE = 74;
-      public static final int While_VALUE = 75;
+      public static final int BitAnd_VALUE = 7;
+      public static final int BitLShift_VALUE = 8;
+      public static final int BitNot_VALUE = 9;
+      public static final int BitOr_VALUE = 10;
+      public static final int BitRShift_VALUE = 11;
+      public static final int BitUnsignedRShift_VALUE = 12;
+      public static final int BitXor_VALUE = 13;
+      public static final int Block_VALUE = 14;
+      public static final int BooleanLiteral_VALUE = 15;
+      public static final int Break_VALUE = 16;
+      public static final int Cast_VALUE = 17;
+      public static final int CharLiteral_VALUE = 18;
+      public static final int ClassOf_VALUE = 19;
+      public static final int Conditional_VALUE = 20;
+      public static final int Constructor_VALUE = 21;
+      public static final int ConstructorCall_VALUE = 22;
+      public static final int Continue_VALUE = 23;
+      public static final int Divide_VALUE = 24;
+      public static final int DoubleLiteral_VALUE = 25;
+      public static final int Equal_VALUE = 26;
+      public static final int FieldDef_VALUE = 27;
+      public static final int FieldRef_VALUE = 28;
+      public static final int FloatLiteral_VALUE = 29;
+      public static final int Greater_VALUE = 30;
+      public static final int GreaterOrEqual_VALUE = 31;
+      public static final int If_VALUE = 32;
+      public static final int InstanceOf_VALUE = 33;
+      public static final int IntLiteral_VALUE = 34;
+      public static final int Lesser_VALUE = 35;
+      public static final int LesserOrEqual_VALUE = 36;
+      public static final int LongLiteral_VALUE = 37;
+      public static final int MethodCall_VALUE = 38;
+      public static final int MethodDef_VALUE = 39;
+      public static final int Minus_VALUE = 40;
+      public static final int Modulus_VALUE = 41;
+      public static final int Multiply_VALUE = 42;
+      public static final int NewArray_VALUE = 43;
+      public static final int NewCall_VALUE = 44;
+      public static final int Not_VALUE = 45;
+      public static final int NotEqual_VALUE = 46;
+      public static final int NullLiteral_VALUE = 47;
+      public static final int Or_VALUE = 48;
+      public static final int Package_VALUE = 49;
+      public static final int ParamDef_VALUE = 50;
+      public static final int Plus_VALUE = 51;
+      public static final int Primitive_VALUE = 52;
+      public static final int Ref_VALUE = 53;
+      public static final int Return_VALUE = 54;
+      public static final int Signature_VALUE = 55;
+      public static final int StaticFieldRef_VALUE = 56;
+      public static final int StaticMethodCall_VALUE = 57;
+      public static final int StringLiteral_VALUE = 58;
+      public static final int SuperRef_VALUE = 59;
+      public static final int Switch_VALUE = 60;
+      public static final int ThisRef_VALUE = 61;
+      public static final int Throw_VALUE = 62;
+      public static final int Try_VALUE = 63;
+      public static final int UnaryMinus_VALUE = 64;
+      public static final int VarDef_VALUE = 65;
+      public static final int VarRef_VALUE = 66;
+      public static final int Void_VALUE = 67;
+      public static final int While_VALUE = 68;
       
       
       public final int getNumber() { return value; }
@@ -278,75 +262,68 @@ public final class JribbleProtos {
           case 4: return ArrayLength;
           case 5: return ArrayRef;
           case 6: return Assignment;
-          case 7: return BinaryOp;
-          case 8: return BitAnd;
-          case 9: return BitLShift;
-          case 10: return BitNot;
-          case 11: return BitOr;
-          case 12: return BitRShift;
-          case 13: return BitUnsignedRShift;
-          case 14: return BitXor;
-          case 15: return Block;
-          case 16: return BooleanLiteral;
-          case 17: return Break;
-          case 18: return Cast;
-          case 19: return CharLiteral;
-          case 20: return ClassBodyElement;
-          case 21: return ClassOf;
-          case 22: return Conditional;
-          case 23: return Constructor;
-          case 24: return ConstructorCall;
-          case 25: return Continue;
-          case 26: return Divide;
-          case 27: return DoubleLiteral;
-          case 28: return Equal;
-          case 29: return Expression;
-          case 30: return FieldDef;
-          case 31: return FieldRef;
-          case 32: return FloatLiteral;
-          case 33: return Greater;
-          case 34: return GreaterOrEqual;
-          case 35: return If;
-          case 36: return InstanceOf;
-          case 37: return IntLiteral;
-          case 38: return Lesser;
-          case 39: return LesserOrEqual;
-          case 40: return Literal;
-          case 41: return LongLiteral;
-          case 42: return MethodCall;
-          case 43: return MethodDef;
-          case 44: return Minus;
-          case 45: return Modulus;
-          case 46: return Multiply;
-          case 47: return NewArray;
-          case 48: return NewCall;
-          case 49: return Not;
-          case 50: return NotEqual;
-          case 51: return NullLiteral;
-          case 52: return Or;
-          case 53: return Package;
-          case 54: return ParamDef;
-          case 55: return Plus;
-          case 56: return Primitive;
-          case 57: return Ref;
-          case 58: return Return;
-          case 59: return Signature;
-          case 60: return Statement;
-          case 61: return StaticFieldRef;
-          case 62: return StaticMethodCall;
-          case 63: return StringLiteral;
-          case 64: return SuperRef;
-          case 65: return Switch;
-          case 66: return ThisRef;
-          case 67: return Throw;
-          case 68: return Try;
-          case 69: return Type;
-          case 70: return UnaryMinus;
-          case 71: return UnaryOp;
-          case 72: return VarDef;
-          case 73: return VarRef;
-          case 74: return Void;
-          case 75: return While;
+          case 7: return BitAnd;
+          case 8: return BitLShift;
+          case 9: return BitNot;
+          case 10: return BitOr;
+          case 11: return BitRShift;
+          case 12: return BitUnsignedRShift;
+          case 13: return BitXor;
+          case 14: return Block;
+          case 15: return BooleanLiteral;
+          case 16: return Break;
+          case 17: return Cast;
+          case 18: return CharLiteral;
+          case 19: return ClassOf;
+          case 20: return Conditional;
+          case 21: return Constructor;
+          case 22: return ConstructorCall;
+          case 23: return Continue;
+          case 24: return Divide;
+          case 25: return DoubleLiteral;
+          case 26: return Equal;
+          case 27: return FieldDef;
+          case 28: return FieldRef;
+          case 29: return FloatLiteral;
+          case 30: return Greater;
+          case 31: return GreaterOrEqual;
+          case 32: return If;
+          case 33: return InstanceOf;
+          case 34: return IntLiteral;
+          case 35: return Lesser;
+          case 36: return LesserOrEqual;
+          case 37: return LongLiteral;
+          case 38: return MethodCall;
+          case 39: return MethodDef;
+          case 40: return Minus;
+          case 41: return Modulus;
+          case 42: return Multiply;
+          case 43: return NewArray;
+          case 44: return NewCall;
+          case 45: return Not;
+          case 46: return NotEqual;
+          case 47: return NullLiteral;
+          case 48: return Or;
+          case 49: return Package;
+          case 50: return ParamDef;
+          case 51: return Plus;
+          case 52: return Primitive;
+          case 53: return Ref;
+          case 54: return Return;
+          case 55: return Signature;
+          case 56: return StaticFieldRef;
+          case 57: return StaticMethodCall;
+          case 58: return StringLiteral;
+          case 59: return SuperRef;
+          case 60: return Switch;
+          case 61: return ThisRef;
+          case 62: return Throw;
+          case 63: return Try;
+          case 64: return UnaryMinus;
+          case 65: return VarDef;
+          case 66: return VarRef;
+          case 67: return Void;
+          case 68: return While;
           default: return null;
         }
       }
@@ -377,7 +354,7 @@ public final class JribbleProtos {
       }
       
       private static final MessageType[] VALUES = {
-        And, Array, ArrayInitializer, ArrayLength, ArrayRef, Assignment, BinaryOp, BitAnd, BitLShift, BitNot, BitOr, BitRShift, BitUnsignedRShift, BitXor, Block, BooleanLiteral, Break, Cast, CharLiteral, ClassBodyElement, ClassOf, Conditional, Constructor, ConstructorCall, Continue, Divide, DoubleLiteral, Equal, Expression, FieldDef, FieldRef, FloatLiteral, Greater, GreaterOrEqual, If, InstanceOf, IntLiteral, Lesser, LesserOrEqual, Literal, LongLiteral, MethodCall, MethodDef, Minus, Modulus, Multiply, NewArray, NewCall, Not, NotEqual, NullLiteral, Or, Package, ParamDef, Plus, Primitive, Ref, Return, Signature, Statement, StaticFieldRef, StaticMethodCall, StringLiteral, SuperRef, Switch, ThisRef, Throw, Try, Type, UnaryMinus, UnaryOp, VarDef, VarRef, Void, While, 
+        And, Array, ArrayInitializer, ArrayLength, ArrayRef, Assignment, BitAnd, BitLShift, BitNot, BitOr, BitRShift, BitUnsignedRShift, BitXor, Block, BooleanLiteral, Break, Cast, CharLiteral, ClassOf, Conditional, Constructor, ConstructorCall, Continue, Divide, DoubleLiteral, Equal, FieldDef, FieldRef, FloatLiteral, Greater, GreaterOrEqual, If, InstanceOf, IntLiteral, Lesser, LesserOrEqual, LongLiteral, MethodCall, MethodDef, Minus, Modulus, Multiply, NewArray, NewCall, Not, NotEqual, NullLiteral, Or, Package, ParamDef, Plus, Primitive, Ref, Return, Signature, StaticFieldRef, StaticMethodCall, StringLiteral, SuperRef, Switch, ThisRef, Throw, Try, UnaryMinus, VarDef, VarRef, Void, While, 
       };
       
       public static MessageType valueOf(
@@ -4196,399 +4173,6 @@ public final class JribbleProtos {
           com.google.jribble.ast.JribbleProtos.Assignment.getDefaultInstance());
   }
   
-  public interface BinaryOpOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string symbol = 2;
-    boolean hasSymbol();
-    String getSymbol();
-  }
-  public static final class BinaryOp extends
-      com.google.protobuf.GeneratedMessage
-      implements BinaryOpOrBuilder {
-    // Use BinaryOp.newBuilder() to construct.
-    private BinaryOp(Builder builder) {
-      super(builder);
-    }
-    private BinaryOp(boolean noInit) {}
-    
-    private static final BinaryOp defaultInstance;
-    public static BinaryOp getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public BinaryOp getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.jribble.ast.JribbleProtos.internal_static_jribble_BinaryOp_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.jribble.ast.JribbleProtos.internal_static_jribble_BinaryOp_fieldAccessorTable;
-    }
-    
-    private int bitField0_;
-    // required string symbol = 2;
-    public static final int SYMBOL_FIELD_NUMBER = 2;
-    private java.lang.Object symbol_;
-    public boolean hasSymbol() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    public String getSymbol() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          symbol_ = s;
-        }
-        return s;
-      }
-    }
-    private com.google.protobuf.ByteString getSymbolBytes() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        symbol_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    
-    private void initFields() {
-      symbol_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
-      if (!hasSymbol()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(2, getSymbolBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getSymbolBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-    
-    public static com.google.jribble.ast.JribbleProtos.BinaryOp parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.BinaryOp parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.BinaryOp parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.BinaryOp parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.BinaryOp parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.BinaryOp parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.BinaryOp parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.google.jribble.ast.JribbleProtos.BinaryOp parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.google.jribble.ast.JribbleProtos.BinaryOp parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.BinaryOp parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.google.jribble.ast.JribbleProtos.BinaryOp prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.google.jribble.ast.JribbleProtos.BinaryOpOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.jribble.ast.JribbleProtos.internal_static_jribble_BinaryOp_descriptor;
-      }
-      
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.jribble.ast.JribbleProtos.internal_static_jribble_BinaryOp_fieldAccessorTable;
-      }
-      
-      // Construct using com.google.jribble.ast.JribbleProtos.BinaryOp.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-      
-      private Builder(BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-      
-      public Builder clear() {
-        super.clear();
-        symbol_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.jribble.ast.JribbleProtos.BinaryOp.getDescriptor();
-      }
-      
-      public com.google.jribble.ast.JribbleProtos.BinaryOp getDefaultInstanceForType() {
-        return com.google.jribble.ast.JribbleProtos.BinaryOp.getDefaultInstance();
-      }
-      
-      public com.google.jribble.ast.JribbleProtos.BinaryOp build() {
-        com.google.jribble.ast.JribbleProtos.BinaryOp result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-      
-      private com.google.jribble.ast.JribbleProtos.BinaryOp buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        com.google.jribble.ast.JribbleProtos.BinaryOp result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
-      public com.google.jribble.ast.JribbleProtos.BinaryOp buildPartial() {
-        com.google.jribble.ast.JribbleProtos.BinaryOp result = new com.google.jribble.ast.JribbleProtos.BinaryOp(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.symbol_ = symbol_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.jribble.ast.JribbleProtos.BinaryOp) {
-          return mergeFrom((com.google.jribble.ast.JribbleProtos.BinaryOp)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(com.google.jribble.ast.JribbleProtos.BinaryOp other) {
-        if (other == com.google.jribble.ast.JribbleProtos.BinaryOp.getDefaultInstance()) return this;
-        if (other.hasSymbol()) {
-          setSymbol(other.getSymbol());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public final boolean isInitialized() {
-        if (!hasSymbol()) {
-          
-          return false;
-        }
-        return true;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000001;
-              symbol_ = input.readBytes();
-              break;
-            }
-          }
-        }
-      }
-      
-      private int bitField0_;
-      
-      // required string symbol = 2;
-      private java.lang.Object symbol_ = "";
-      public boolean hasSymbol() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      public String getSymbol() {
-        java.lang.Object ref = symbol_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          symbol_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setSymbol(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        symbol_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearSymbol() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        symbol_ = getDefaultInstance().getSymbol();
-        onChanged();
-        return this;
-      }
-      void setSymbol(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
-        symbol_ = value;
-        onChanged();
-      }
-      
-      // @@protoc_insertion_point(builder_scope:jribble.BinaryOp)
-    }
-    
-    static {
-      defaultInstance = new BinaryOp(true);
-      defaultInstance.initFields();
-    }
-    
-    // @@protoc_insertion_point(class_scope:jribble.BinaryOp)
-    public static final int AST_FIELD_NUMBER = 1006;
-    public static final
-      com.google.protobuf.GeneratedMessage.GeneratedExtension<
-        com.google.jribble.ast.JribbleProtos.AST,
-        com.google.jribble.ast.JribbleProtos.BinaryOp> aST = com.google.protobuf.GeneratedMessage
-            .newMessageScopedGeneratedExtension(
-          com.google.jribble.ast.JribbleProtos.BinaryOp.getDefaultInstance(),
-          0,
-          com.google.jribble.ast.JribbleProtos.BinaryOp.class,
-          com.google.jribble.ast.JribbleProtos.BinaryOp.getDefaultInstance());
-  }
-  
   public interface BitAndOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
     
@@ -5186,7 +4770,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.BitAnd)
-    public static final int AST_FIELD_NUMBER = 1007;
+    public static final int AST_FIELD_NUMBER = 1006;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -5795,7 +5379,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.BitLShift)
-    public static final int AST_FIELD_NUMBER = 1008;
+    public static final int AST_FIELD_NUMBER = 1007;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -6245,7 +5829,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.BitNot)
-    public static final int AST_FIELD_NUMBER = 1009;
+    public static final int AST_FIELD_NUMBER = 1008;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -6854,7 +6438,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.BitOr)
-    public static final int AST_FIELD_NUMBER = 1010;
+    public static final int AST_FIELD_NUMBER = 1009;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -7463,7 +7047,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.BitRShift)
-    public static final int AST_FIELD_NUMBER = 1011;
+    public static final int AST_FIELD_NUMBER = 1010;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -8072,7 +7656,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.BitUnsignedRShift)
-    public static final int AST_FIELD_NUMBER = 1012;
+    public static final int AST_FIELD_NUMBER = 1011;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -8681,7 +8265,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.BitXor)
-    public static final int AST_FIELD_NUMBER = 1013;
+    public static final int AST_FIELD_NUMBER = 1012;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -9254,7 +8838,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Block)
-    public static final int AST_FIELD_NUMBER = 1014;
+    public static final int AST_FIELD_NUMBER = 1013;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -9610,7 +9194,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.BooleanLiteral)
-    public static final int AST_FIELD_NUMBER = 1015;
+    public static final int AST_FIELD_NUMBER = 1014;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -9995,7 +9579,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Break)
-    public static final int AST_FIELD_NUMBER = 1016;
+    public static final int AST_FIELD_NUMBER = 1015;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -10604,7 +10188,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Cast)
-    public static final int AST_FIELD_NUMBER = 1017;
+    public static final int AST_FIELD_NUMBER = 1016;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -10960,7 +10544,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.CharLiteral)
-    public static final int AST_FIELD_NUMBER = 1018;
+    public static final int AST_FIELD_NUMBER = 1017;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -11410,7 +10994,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.ClassOf)
-    public static final int AST_FIELD_NUMBER = 1019;
+    public static final int AST_FIELD_NUMBER = 1018;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -12337,7 +11921,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Conditional)
-    public static final int AST_FIELD_NUMBER = 1020;
+    public static final int AST_FIELD_NUMBER = 1019;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -13285,7 +12869,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Constructor)
-    public static final int AST_FIELD_NUMBER = 1021;
+    public static final int AST_FIELD_NUMBER = 1020;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -14020,7 +13604,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.ConstructorCall)
-    public static final int AST_FIELD_NUMBER = 1022;
+    public static final int AST_FIELD_NUMBER = 1021;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -14405,7 +13989,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Continue)
-    public static final int AST_FIELD_NUMBER = 1023;
+    public static final int AST_FIELD_NUMBER = 1022;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -15014,7 +14598,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Divide)
-    public static final int AST_FIELD_NUMBER = 1024;
+    public static final int AST_FIELD_NUMBER = 1023;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -15370,7 +14954,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.DoubleLiteral)
-    public static final int AST_FIELD_NUMBER = 1025;
+    public static final int AST_FIELD_NUMBER = 1024;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -15979,7 +15563,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Equal)
-    public static final int AST_FIELD_NUMBER = 1026;
+    public static final int AST_FIELD_NUMBER = 1025;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -16797,7 +16381,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.FieldDef)
-    public static final int AST_FIELD_NUMBER = 1027;
+    public static final int AST_FIELD_NUMBER = 1026;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -17508,7 +17092,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.FieldRef)
-    public static final int AST_FIELD_NUMBER = 1028;
+    public static final int AST_FIELD_NUMBER = 1027;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -17864,7 +17448,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.FloatLiteral)
-    public static final int AST_FIELD_NUMBER = 1029;
+    public static final int AST_FIELD_NUMBER = 1028;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -18473,7 +18057,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Greater)
-    public static final int AST_FIELD_NUMBER = 1030;
+    public static final int AST_FIELD_NUMBER = 1029;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -19082,7 +18666,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.GreaterOrEqual)
-    public static final int AST_FIELD_NUMBER = 1031;
+    public static final int AST_FIELD_NUMBER = 1030;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -19846,7 +19430,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.If)
-    public static final int AST_FIELD_NUMBER = 1032;
+    public static final int AST_FIELD_NUMBER = 1031;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -20455,7 +20039,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.InstanceOf)
-    public static final int AST_FIELD_NUMBER = 1033;
+    public static final int AST_FIELD_NUMBER = 1032;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -20811,7 +20395,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.IntLiteral)
-    public static final int AST_FIELD_NUMBER = 1034;
+    public static final int AST_FIELD_NUMBER = 1033;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -21420,7 +21004,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Lesser)
-    public static final int AST_FIELD_NUMBER = 1035;
+    public static final int AST_FIELD_NUMBER = 1034;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -22029,7 +21613,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.LesserOrEqual)
-    public static final int AST_FIELD_NUMBER = 1036;
+    public static final int AST_FIELD_NUMBER = 1035;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -22385,7 +21969,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.LongLiteral)
-    public static final int AST_FIELD_NUMBER = 1037;
+    public static final int AST_FIELD_NUMBER = 1036;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -23279,7 +22863,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.MethodCall)
-    public static final int AST_FIELD_NUMBER = 1038;
+    public static final int AST_FIELD_NUMBER = 1037;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -24382,7 +23966,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.MethodDef)
-    public static final int AST_FIELD_NUMBER = 1039;
+    public static final int AST_FIELD_NUMBER = 1038;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -24991,7 +24575,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Minus)
-    public static final int AST_FIELD_NUMBER = 1040;
+    public static final int AST_FIELD_NUMBER = 1039;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -25600,7 +25184,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Modulus)
-    public static final int AST_FIELD_NUMBER = 1041;
+    public static final int AST_FIELD_NUMBER = 1040;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -26209,7 +25793,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Multiply)
-    public static final int AST_FIELD_NUMBER = 1042;
+    public static final int AST_FIELD_NUMBER = 1041;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -27380,7 +26964,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.NewArray)
-    public static final int AST_FIELD_NUMBER = 1043;
+    public static final int AST_FIELD_NUMBER = 1042;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -27830,7 +27414,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.NewCall)
-    public static final int AST_FIELD_NUMBER = 1044;
+    public static final int AST_FIELD_NUMBER = 1043;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -28280,7 +27864,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Not)
-    public static final int AST_FIELD_NUMBER = 1045;
+    public static final int AST_FIELD_NUMBER = 1044;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -28889,7 +28473,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.NotEqual)
-    public static final int AST_FIELD_NUMBER = 1046;
+    public static final int AST_FIELD_NUMBER = 1045;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -29498,7 +29082,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Or)
-    public static final int AST_FIELD_NUMBER = 1047;
+    public static final int AST_FIELD_NUMBER = 1046;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -29891,7 +29475,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Package)
-    public static final int AST_FIELD_NUMBER = 1048;
+    public static final int AST_FIELD_NUMBER = 1047;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -30443,7 +30027,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.ParamDef)
-    public static final int AST_FIELD_NUMBER = 1049;
+    public static final int AST_FIELD_NUMBER = 1048;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -31052,7 +30636,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Plus)
-    public static final int AST_FIELD_NUMBER = 1050;
+    public static final int AST_FIELD_NUMBER = 1049;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -31445,7 +31029,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Primitive)
-    public static final int AST_FIELD_NUMBER = 1051;
+    public static final int AST_FIELD_NUMBER = 1050;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -31993,7 +31577,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Ref)
-    public static final int AST_FIELD_NUMBER = 1052;
+    public static final int AST_FIELD_NUMBER = 1051;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -32439,7 +32023,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Return)
-    public static final int AST_FIELD_NUMBER = 1053;
+    public static final int AST_FIELD_NUMBER = 1052;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -33435,7 +33019,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Signature)
-    public static final int AST_FIELD_NUMBER = 1054;
+    public static final int AST_FIELD_NUMBER = 1053;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -33987,7 +33571,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.StaticFieldRef)
-    public static final int AST_FIELD_NUMBER = 1055;
+    public static final int AST_FIELD_NUMBER = 1054;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -34881,7 +34465,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.StaticMethodCall)
-    public static final int AST_FIELD_NUMBER = 1056;
+    public static final int AST_FIELD_NUMBER = 1055;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -35274,7 +34858,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.StringLiteral)
-    public static final int AST_FIELD_NUMBER = 1057;
+    public static final int AST_FIELD_NUMBER = 1056;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -36763,7 +36347,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Switch)
-    public static final int AST_FIELD_NUMBER = 1058;
+    public static final int AST_FIELD_NUMBER = 1057;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -37213,7 +36797,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Throw)
-    public static final int AST_FIELD_NUMBER = 1059;
+    public static final int AST_FIELD_NUMBER = 1058;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -38804,7 +38388,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.Try)
-    public static final int AST_FIELD_NUMBER = 1060;
+    public static final int AST_FIELD_NUMBER = 1059;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -39254,7 +38838,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.UnaryMinus)
-    public static final int AST_FIELD_NUMBER = 1061;
+    public static final int AST_FIELD_NUMBER = 1060;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -39264,399 +38848,6 @@ public final class JribbleProtos {
           0,
           com.google.jribble.ast.JribbleProtos.UnaryMinus.class,
           com.google.jribble.ast.JribbleProtos.UnaryMinus.getDefaultInstance());
-  }
-  
-  public interface UnaryOpOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string symbol = 2;
-    boolean hasSymbol();
-    String getSymbol();
-  }
-  public static final class UnaryOp extends
-      com.google.protobuf.GeneratedMessage
-      implements UnaryOpOrBuilder {
-    // Use UnaryOp.newBuilder() to construct.
-    private UnaryOp(Builder builder) {
-      super(builder);
-    }
-    private UnaryOp(boolean noInit) {}
-    
-    private static final UnaryOp defaultInstance;
-    public static UnaryOp getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public UnaryOp getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.jribble.ast.JribbleProtos.internal_static_jribble_UnaryOp_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.jribble.ast.JribbleProtos.internal_static_jribble_UnaryOp_fieldAccessorTable;
-    }
-    
-    private int bitField0_;
-    // required string symbol = 2;
-    public static final int SYMBOL_FIELD_NUMBER = 2;
-    private java.lang.Object symbol_;
-    public boolean hasSymbol() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    public String getSymbol() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          symbol_ = s;
-        }
-        return s;
-      }
-    }
-    private com.google.protobuf.ByteString getSymbolBytes() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        symbol_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    
-    private void initFields() {
-      symbol_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
-      if (!hasSymbol()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(2, getSymbolBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getSymbolBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-    
-    public static com.google.jribble.ast.JribbleProtos.UnaryOp parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.UnaryOp parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.UnaryOp parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.UnaryOp parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.UnaryOp parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.UnaryOp parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.UnaryOp parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.google.jribble.ast.JribbleProtos.UnaryOp parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.google.jribble.ast.JribbleProtos.UnaryOp parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.google.jribble.ast.JribbleProtos.UnaryOp parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.google.jribble.ast.JribbleProtos.UnaryOp prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.google.jribble.ast.JribbleProtos.UnaryOpOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.jribble.ast.JribbleProtos.internal_static_jribble_UnaryOp_descriptor;
-      }
-      
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.jribble.ast.JribbleProtos.internal_static_jribble_UnaryOp_fieldAccessorTable;
-      }
-      
-      // Construct using com.google.jribble.ast.JribbleProtos.UnaryOp.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-      
-      private Builder(BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-      
-      public Builder clear() {
-        super.clear();
-        symbol_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.jribble.ast.JribbleProtos.UnaryOp.getDescriptor();
-      }
-      
-      public com.google.jribble.ast.JribbleProtos.UnaryOp getDefaultInstanceForType() {
-        return com.google.jribble.ast.JribbleProtos.UnaryOp.getDefaultInstance();
-      }
-      
-      public com.google.jribble.ast.JribbleProtos.UnaryOp build() {
-        com.google.jribble.ast.JribbleProtos.UnaryOp result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-      
-      private com.google.jribble.ast.JribbleProtos.UnaryOp buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        com.google.jribble.ast.JribbleProtos.UnaryOp result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
-      public com.google.jribble.ast.JribbleProtos.UnaryOp buildPartial() {
-        com.google.jribble.ast.JribbleProtos.UnaryOp result = new com.google.jribble.ast.JribbleProtos.UnaryOp(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.symbol_ = symbol_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.jribble.ast.JribbleProtos.UnaryOp) {
-          return mergeFrom((com.google.jribble.ast.JribbleProtos.UnaryOp)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(com.google.jribble.ast.JribbleProtos.UnaryOp other) {
-        if (other == com.google.jribble.ast.JribbleProtos.UnaryOp.getDefaultInstance()) return this;
-        if (other.hasSymbol()) {
-          setSymbol(other.getSymbol());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public final boolean isInitialized() {
-        if (!hasSymbol()) {
-          
-          return false;
-        }
-        return true;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000001;
-              symbol_ = input.readBytes();
-              break;
-            }
-          }
-        }
-      }
-      
-      private int bitField0_;
-      
-      // required string symbol = 2;
-      private java.lang.Object symbol_ = "";
-      public boolean hasSymbol() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      public String getSymbol() {
-        java.lang.Object ref = symbol_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          symbol_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setSymbol(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        symbol_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearSymbol() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        symbol_ = getDefaultInstance().getSymbol();
-        onChanged();
-        return this;
-      }
-      void setSymbol(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
-        symbol_ = value;
-        onChanged();
-      }
-      
-      // @@protoc_insertion_point(builder_scope:jribble.UnaryOp)
-    }
-    
-    static {
-      defaultInstance = new UnaryOp(true);
-      defaultInstance.initFields();
-    }
-    
-    // @@protoc_insertion_point(class_scope:jribble.UnaryOp)
-    public static final int AST_FIELD_NUMBER = 1062;
-    public static final
-      com.google.protobuf.GeneratedMessage.GeneratedExtension<
-        com.google.jribble.ast.JribbleProtos.AST,
-        com.google.jribble.ast.JribbleProtos.UnaryOp> aST = com.google.protobuf.GeneratedMessage
-            .newMessageScopedGeneratedExtension(
-          com.google.jribble.ast.JribbleProtos.UnaryOp.getDefaultInstance(),
-          0,
-          com.google.jribble.ast.JribbleProtos.UnaryOp.class,
-          com.google.jribble.ast.JribbleProtos.UnaryOp.getDefaultInstance());
   }
   
   public interface VarDefOrBuilder
@@ -40354,7 +39545,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.VarDef)
-    public static final int AST_FIELD_NUMBER = 1063;
+    public static final int AST_FIELD_NUMBER = 1061;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -40747,7 +39938,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.VarRef)
-    public static final int AST_FIELD_NUMBER = 1064;
+    public static final int AST_FIELD_NUMBER = 1062;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -41450,7 +40641,7 @@ public final class JribbleProtos {
     }
     
     // @@protoc_insertion_point(class_scope:jribble.While)
-    public static final int AST_FIELD_NUMBER = 1065;
+    public static final int AST_FIELD_NUMBER = 1063;
     public static final
       com.google.protobuf.GeneratedMessage.GeneratedExtension<
         com.google.jribble.ast.JribbleProtos.AST,
@@ -44354,11 +43545,6 @@ public final class JribbleProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_jribble_Assignment_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_jribble_BinaryOp_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_jribble_BinaryOp_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_jribble_BitAnd_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -44649,11 +43835,6 @@ public final class JribbleProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_jribble_UnaryMinus_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_jribble_UnaryOp_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_jribble_UnaryOp_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_jribble_VarDef_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -44692,234 +43873,228 @@ public final class JribbleProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rjribble.proto\022\007jribble\"\361\010\n\003AST\022&\n\004type" +
-      "\030\001 \002(\0162\030.jribble.AST.MessageType\"\266\010\n\013Mes" +
+      "\n\rjribble.proto\022\007jribble\"\212\010\n\003AST\022&\n\004type" +
+      "\030\001 \002(\0162\030.jribble.AST.MessageType\"\317\007\n\013Mes" +
       "sageType\022\007\n\003And\020\001\022\t\n\005Array\020\002\022\024\n\020ArrayIni" +
       "tializer\020\003\022\017\n\013ArrayLength\020\004\022\014\n\010ArrayRef\020" +
-      "\005\022\016\n\nAssignment\020\006\022\014\n\010BinaryOp\020\007\022\n\n\006BitAn" +
-      "d\020\010\022\r\n\tBitLShift\020\t\022\n\n\006BitNot\020\n\022\t\n\005BitOr\020" +
-      "\013\022\r\n\tBitRShift\020\014\022\025\n\021BitUnsignedRShift\020\r\022" +
-      "\n\n\006BitXor\020\016\022\t\n\005Block\020\017\022\022\n\016BooleanLiteral" +
-      "\020\020\022\t\n\005Break\020\021\022\010\n\004Cast\020\022\022\017\n\013CharLiteral\020\023" +
-      "\022\024\n\020ClassBodyElement\020\024\022\013\n\007ClassOf\020\025\022\017\n\013C",
-      "onditional\020\026\022\017\n\013Constructor\020\027\022\023\n\017Constru" +
-      "ctorCall\020\030\022\014\n\010Continue\020\031\022\n\n\006Divide\020\032\022\021\n\r" +
-      "DoubleLiteral\020\033\022\t\n\005Equal\020\034\022\016\n\nExpression" +
-      "\020\035\022\014\n\010FieldDef\020\036\022\014\n\010FieldRef\020\037\022\020\n\014FloatL" +
-      "iteral\020 \022\013\n\007Greater\020!\022\022\n\016GreaterOrEqual\020" +
-      "\"\022\006\n\002If\020#\022\016\n\nInstanceOf\020$\022\016\n\nIntLiteral\020" +
-      "%\022\n\n\006Lesser\020&\022\021\n\rLesserOrEqual\020\'\022\013\n\007Lite" +
-      "ral\020(\022\017\n\013LongLiteral\020)\022\016\n\nMethodCall\020*\022\r" +
-      "\n\tMethodDef\020+\022\t\n\005Minus\020,\022\013\n\007Modulus\020-\022\014\n" +
-      "\010Multiply\020.\022\014\n\010NewArray\020/\022\013\n\007NewCall\0200\022\007",
-      "\n\003Not\0201\022\014\n\010NotEqual\0202\022\017\n\013NullLiteral\0203\022\006" +
-      "\n\002Or\0204\022\013\n\007Package\0205\022\014\n\010ParamDef\0206\022\010\n\004Plu" +
-      "s\0207\022\r\n\tPrimitive\0208\022\007\n\003Ref\0209\022\n\n\006Return\020:\022" +
-      "\r\n\tSignature\020;\022\r\n\tStatement\020<\022\022\n\016StaticF" +
-      "ieldRef\020=\022\024\n\020StaticMethodCall\020>\022\021\n\rStrin" +
-      "gLiteral\020?\022\014\n\010SuperRef\020@\022\n\n\006Switch\020A\022\013\n\007" +
-      "ThisRef\020B\022\t\n\005Throw\020C\022\007\n\003Try\020D\022\010\n\004Type\020E\022" +
-      "\016\n\nUnaryMinus\020F\022\013\n\007UnaryOp\020G\022\n\n\006VarDef\020H" +
-      "\022\n\n\006VarRef\020I\022\010\n\004Void\020J\022\t\n\005While\020K*\t\010\350\007\020\200" +
-      "\200\200\200\002\"e\n\003And\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031",
-      "\n\003rhs\030\003 \002(\0132\014.jribble.AST2(\n\003aST\022\014.jribb" +
-      "le.AST\030\350\007 \002(\0132\014.jribble.And\"N\n\005Array\022\031\n\003" +
-      "typ\030\002 \002(\0132\014.jribble.AST2*\n\003aST\022\014.jribble" +
-      ".AST\030\351\007 \002(\0132\016.jribble.Array\"\204\001\n\020ArrayIni" +
-      "tializer\022\031\n\003typ\030\002 \002(\0132\014.jribble.AST\022\036\n\010e" +
-      "lements\030\003 \003(\0132\014.jribble.AST25\n\003aST\022\014.jri" +
-      "bble.AST\030\352\007 \002(\0132\031.jribble.ArrayInitializ" +
-      "er\"Y\n\013ArrayLength\022\030\n\002on\030\002 \002(\0132\014.jribble." +
-      "AST20\n\003aST\022\014.jribble.AST\030\353\007 \002(\0132\024.jribbl" +
-      "e.ArrayLength\"p\n\010ArrayRef\022\030\n\002on\030\002 \002(\0132\014.",
-      "jribble.AST\022\033\n\005index\030\003 \002(\0132\014.jribble.AST" +
-      "2-\n\003aST\022\014.jribble.AST\030\354\007 \002(\0132\021.jribble.A" +
-      "rrayRef\"s\n\nAssignment\022\031\n\003lhs\030\002 \002(\0132\014.jri" +
-      "bble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST2/\n\003a" +
-      "ST\022\014.jribble.AST\030\355\007 \002(\0132\023.jribble.Assign" +
-      "ment\"I\n\010BinaryOp\022\016\n\006symbol\030\002 \002(\t2-\n\003aST\022" +
-      "\014.jribble.AST\030\356\007 \002(\0132\021.jribble.BinaryOp\"" +
-      "k\n\006BitAnd\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003" +
-      "rhs\030\003 \002(\0132\014.jribble.AST2+\n\003aST\022\014.jribble" +
-      ".AST\030\357\007 \002(\0132\017.jribble.BitAnd\"q\n\tBitLShif",
-      "t\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(" +
-      "\0132\014.jribble.AST2.\n\003aST\022\014.jribble.AST\030\360\007 " +
-      "\002(\0132\022.jribble.BitLShift\"W\n\006BitNot\022 \n\nexp" +
-      "ression\030\002 \002(\0132\014.jribble.AST2+\n\003aST\022\014.jri" +
-      "bble.AST\030\361\007 \002(\0132\017.jribble.BitNot\"i\n\005BitO" +
-      "r\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(" +
-      "\0132\014.jribble.AST2*\n\003aST\022\014.jribble.AST\030\362\007 " +
-      "\002(\0132\016.jribble.BitOr\"q\n\tBitRShift\022\031\n\003lhs\030" +
-      "\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribb" +
-      "le.AST2.\n\003aST\022\014.jribble.AST\030\363\007 \002(\0132\022.jri",
-      "bble.BitRShift\"\201\001\n\021BitUnsignedRShift\022\031\n\003" +
-      "lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.j" +
-      "ribble.AST26\n\003aST\022\014.jribble.AST\030\364\007 \002(\0132\032" +
-      ".jribble.BitUnsignedRShift\"k\n\006BitXor\022\031\n\003" +
-      "lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.j" +
-      "ribble.AST2+\n\003aST\022\014.jribble.AST\030\365\007 \002(\0132\017" +
-      ".jribble.BitXor\"U\n\005Block\022 \n\nstatements\030\002" +
-      " \003(\0132\014.jribble.AST2*\n\003aST\022\014.jribble.AST\030" +
-      "\366\007 \002(\0132\016.jribble.Block\"P\n\016BooleanLiteral" +
-      "\022\t\n\001v\030\002 \002(\01023\n\003aST\022\014.jribble.AST\030\367\007 \002(\0132",
-      "\027.jribble.BooleanLiteral\"B\n\005Break\022\r\n\005lab" +
-      "el\030\002 \001(\t2*\n\003aST\022\014.jribble.AST\030\370\007 \002(\0132\016.j" +
-      "ribble.Break\"f\n\004Cast\022\030\n\002on\030\002 \002(\0132\014.jribb" +
-      "le.AST\022\031\n\003typ\030\003 \002(\0132\014.jribble.AST2)\n\003aST" +
-      "\022\014.jribble.AST\030\371\007 \002(\0132\r.jribble.Cast\"J\n\013" +
-      "CharLiteral\022\t\n\001v\030\002 \002(\00520\n\003aST\022\014.jribble." +
-      "AST\030\372\007 \002(\0132\024.jribble.CharLiteral\"R\n\007Clas" +
-      "sOf\022\031\n\003typ\030\002 \002(\0132\014.jribble.AST2,\n\003aST\022\014." +
-      "jribble.AST\030\373\007 \002(\0132\020.jribble.ClassOf\"\264\001\n" +
-      "\013Conditional\022\037\n\tcondition\030\002 \002(\0132\014.jribbl",
-      "e.AST\022\031\n\003typ\030\003 \002(\0132\014.jribble.AST\022\032\n\004then" +
-      "\030\004 \002(\0132\014.jribble.AST\022\033\n\005elsee\030\005 \002(\0132\014.jr" +
-      "ibble.AST20\n\003aST\022\014.jribble.AST\030\374\007 \002(\0132\024." +
-      "jribble.Conditional\"\227\001\n\013Constructor\022\016\n\006m" +
-      "odifs\030\002 \003(\t\022\014\n\004name\030\003 \002(\t\022\034\n\006params\030\004 \003(" +
-      "\0132\014.jribble.AST\022\032\n\004body\030\005 \002(\0132\014.jribble." +
-      "AST20\n\003aST\022\014.jribble.AST\030\375\007 \002(\0132\024.jribbl" +
-      "e.Constructor\"\206\001\n\017ConstructorCall\022\037\n\tsig" +
-      "nature\030\002 \002(\0132\014.jribble.AST\022\034\n\006params\030\003 \003" +
-      "(\0132\014.jribble.AST24\n\003aST\022\014.jribble.AST\030\376\007",
-      " \002(\0132\030.jribble.ConstructorCall\"H\n\010Contin" +
-      "ue\022\r\n\005label\030\002 \001(\t2-\n\003aST\022\014.jribble.AST\030\377" +
-      "\007 \002(\0132\021.jribble.Continue\"k\n\006Divide\022\031\n\003lh" +
-      "s\030\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jri" +
-      "bble.AST2+\n\003aST\022\014.jribble.AST\030\200\010 \002(\0132\017.j" +
-      "ribble.Divide\"N\n\rDoubleLiteral\022\t\n\001v\030\002 \002(" +
-      "\00122\n\003aST\022\014.jribble.AST\030\201\010 \002(\0132\026.jribble." +
-      "DoubleLiteral\"i\n\005Equal\022\031\n\003lhs\030\002 \002(\0132\014.jr" +
-      "ibble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST2*\n\003" +
-      "aST\022\014.jribble.AST\030\202\010 \002(\0132\016.jribble.Equal",
-      "\"\217\001\n\010FieldDef\022\016\n\006modifs\030\002 \003(\t\022\031\n\003typ\030\003 \002" +
-      "(\0132\014.jribble.AST\022\014\n\004name\030\004 \002(\t\022\033\n\005value\030" +
-      "\005 \001(\0132\014.jribble.AST2-\n\003aST\022\014.jribble.AST" +
-      "\030\203\010 \002(\0132\021.jribble.FieldDef\"\177\n\010FieldRef\022\030" +
-      "\n\002on\030\002 \002(\0132\014.jribble.AST\022\034\n\006onType\030\003 \002(\013" +
-      "2\014.jribble.AST\022\014\n\004name\030\004 \002(\t2-\n\003aST\022\014.jr" +
-      "ibble.AST\030\204\010 \002(\0132\021.jribble.FieldRef\"L\n\014F" +
-      "loatLiteral\022\t\n\001v\030\002 \002(\00221\n\003aST\022\014.jribble." +
-      "AST\030\205\010 \002(\0132\025.jribble.FloatLiteral\"m\n\007Gre" +
-      "ater\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003",
-      " \002(\0132\014.jribble.AST2,\n\003aST\022\014.jribble.AST\030" +
-      "\206\010 \002(\0132\020.jribble.Greater\"{\n\016GreaterOrEqu" +
-      "al\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002" +
-      "(\0132\014.jribble.AST23\n\003aST\022\014.jribble.AST\030\207\010" +
-      " \002(\0132\027.jribble.GreaterOrEqual\"\207\001\n\002If\022\037\n\t" +
-      "condition\030\002 \002(\0132\014.jribble.AST\022\032\n\004then\030\003 " +
-      "\002(\0132\014.jribble.AST\022\033\n\005elsee\030\004 \001(\0132\014.jribb" +
-      "le.AST2\'\n\003aST\022\014.jribble.AST\030\210\010 \002(\0132\013.jri" +
-      "bble.If\"r\n\nInstanceOf\022\030\n\002on\030\002 \002(\0132\014.jrib" +
-      "ble.AST\022\031\n\003typ\030\003 \002(\0132\014.jribble.AST2/\n\003aS",
-      "T\022\014.jribble.AST\030\211\010 \002(\0132\023.jribble.Instanc" +
-      "eOf\"H\n\nIntLiteral\022\t\n\001v\030\002 \002(\0052/\n\003aST\022\014.jr" +
-      "ibble.AST\030\212\010 \002(\0132\023.jribble.IntLiteral\"k\n" +
-      "\006Lesser\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003rh" +
-      "s\030\003 \002(\0132\014.jribble.AST2+\n\003aST\022\014.jribble.A" +
-      "ST\030\213\010 \002(\0132\017.jribble.Lesser\"y\n\rLesserOrEq" +
-      "ual\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 " +
-      "\002(\0132\014.jribble.AST22\n\003aST\022\014.jribble.AST\030\214" +
-      "\010 \002(\0132\026.jribble.LesserOrEqual\"J\n\013LongLit" +
-      "eral\022\t\n\001v\030\002 \002(\00320\n\003aST\022\014.jribble.AST\030\215\010 ",
-      "\002(\0132\024.jribble.LongLiteral\"\226\001\n\nMethodCall" +
-      "\022\030\n\002on\030\002 \002(\0132\014.jribble.AST\022\037\n\tsignature\030" +
-      "\003 \002(\0132\014.jribble.AST\022\034\n\006params\030\004 \003(\0132\014.jr" +
-      "ibble.AST2/\n\003aST\022\014.jribble.AST\030\216\010 \002(\0132\023." +
-      "jribble.MethodCall\"\265\001\n\tMethodDef\022\016\n\006modi" +
-      "fs\030\002 \003(\t\022 \n\nreturnType\030\003 \002(\0132\014.jribble.A" +
-      "ST\022\014\n\004name\030\004 \002(\t\022\034\n\006params\030\005 \003(\0132\014.jribb" +
-      "le.AST\022\032\n\004body\030\006 \001(\0132\014.jribble.AST2.\n\003aS" +
-      "T\022\014.jribble.AST\030\217\010 \002(\0132\022.jribble.MethodD" +
-      "ef\"i\n\005Minus\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031",
-      "\n\003rhs\030\003 \002(\0132\014.jribble.AST2*\n\003aST\022\014.jribb" +
-      "le.AST\030\220\010 \002(\0132\016.jribble.Minus\"m\n\007Modulus" +
-      "\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(\013" +
-      "2\014.jribble.AST2,\n\003aST\022\014.jribble.AST\030\221\010 \002" +
-      "(\0132\020.jribble.Modulus\"o\n\010Multiply\022\031\n\003lhs\030" +
-      "\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribb" +
-      "le.AST2-\n\003aST\022\014.jribble.AST\030\222\010 \002(\0132\021.jri" +
-      "bble.Multiply\"\233\001\n\010NewArray\022\031\n\003typ\030\002 \002(\0132" +
-      "\014.jribble.AST\022$\n\004dims\030\003 \003(\n2\026.jribble.Ne" +
-      "wArray.Dims\032\037\n\004Dims\022\027\n\001t\030\r \001(\0132\014.jribble",
-      ".AST2-\n\003aST\022\014.jribble.AST\030\223\010 \002(\0132\021.jribb" +
-      "le.NewArray\"Z\n\007NewCall\022!\n\013constructor\030\002 " +
-      "\002(\0132\014.jribble.AST2,\n\003aST\022\014.jribble.AST\030\224" +
-      "\010 \002(\0132\020.jribble.NewCall\"Q\n\003Not\022 \n\nexpres" +
-      "sion\030\002 \002(\0132\014.jribble.AST2(\n\003aST\022\014.jribbl" +
-      "e.AST\030\225\010 \002(\0132\014.jribble.Not\"o\n\010NotEqual\022\031" +
+      "\005\022\016\n\nAssignment\020\006\022\n\n\006BitAnd\020\007\022\r\n\tBitLShi" +
+      "ft\020\010\022\n\n\006BitNot\020\t\022\t\n\005BitOr\020\n\022\r\n\tBitRShift" +
+      "\020\013\022\025\n\021BitUnsignedRShift\020\014\022\n\n\006BitXor\020\r\022\t\n" +
+      "\005Block\020\016\022\022\n\016BooleanLiteral\020\017\022\t\n\005Break\020\020\022" +
+      "\010\n\004Cast\020\021\022\017\n\013CharLiteral\020\022\022\013\n\007ClassOf\020\023\022" +
+      "\017\n\013Conditional\020\024\022\017\n\013Constructor\020\025\022\023\n\017Con",
+      "structorCall\020\026\022\014\n\010Continue\020\027\022\n\n\006Divide\020\030" +
+      "\022\021\n\rDoubleLiteral\020\031\022\t\n\005Equal\020\032\022\014\n\010FieldD" +
+      "ef\020\033\022\014\n\010FieldRef\020\034\022\020\n\014FloatLiteral\020\035\022\013\n\007" +
+      "Greater\020\036\022\022\n\016GreaterOrEqual\020\037\022\006\n\002If\020 \022\016\n" +
+      "\nInstanceOf\020!\022\016\n\nIntLiteral\020\"\022\n\n\006Lesser\020" +
+      "#\022\021\n\rLesserOrEqual\020$\022\017\n\013LongLiteral\020%\022\016\n" +
+      "\nMethodCall\020&\022\r\n\tMethodDef\020\'\022\t\n\005Minus\020(\022" +
+      "\013\n\007Modulus\020)\022\014\n\010Multiply\020*\022\014\n\010NewArray\020+" +
+      "\022\013\n\007NewCall\020,\022\007\n\003Not\020-\022\014\n\010NotEqual\020.\022\017\n\013" +
+      "NullLiteral\020/\022\006\n\002Or\0200\022\013\n\007Package\0201\022\014\n\010Pa",
+      "ramDef\0202\022\010\n\004Plus\0203\022\r\n\tPrimitive\0204\022\007\n\003Ref" +
+      "\0205\022\n\n\006Return\0206\022\r\n\tSignature\0207\022\022\n\016StaticF" +
+      "ieldRef\0208\022\024\n\020StaticMethodCall\0209\022\021\n\rStrin" +
+      "gLiteral\020:\022\014\n\010SuperRef\020;\022\n\n\006Switch\020<\022\013\n\007" +
+      "ThisRef\020=\022\t\n\005Throw\020>\022\007\n\003Try\020?\022\016\n\nUnaryMi" +
+      "nus\020@\022\n\n\006VarDef\020A\022\n\n\006VarRef\020B\022\010\n\004Void\020C\022" +
+      "\t\n\005While\020D*\t\010\350\007\020\200\200\200\200\002\"e\n\003And\022\031\n\003lhs\030\002 \002(" +
+      "\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.A" +
+      "ST2(\n\003aST\022\014.jribble.AST\030\350\007 \002(\0132\014.jribble" +
+      ".And\"N\n\005Array\022\031\n\003typ\030\002 \002(\0132\014.jribble.AST",
+      "2*\n\003aST\022\014.jribble.AST\030\351\007 \002(\0132\016.jribble.A" +
+      "rray\"\204\001\n\020ArrayInitializer\022\031\n\003typ\030\002 \002(\0132\014" +
+      ".jribble.AST\022\036\n\010elements\030\003 \003(\0132\014.jribble" +
+      ".AST25\n\003aST\022\014.jribble.AST\030\352\007 \002(\0132\031.jribb" +
+      "le.ArrayInitializer\"Y\n\013ArrayLength\022\030\n\002on" +
+      "\030\002 \002(\0132\014.jribble.AST20\n\003aST\022\014.jribble.AS" +
+      "T\030\353\007 \002(\0132\024.jribble.ArrayLength\"p\n\010ArrayR" +
+      "ef\022\030\n\002on\030\002 \002(\0132\014.jribble.AST\022\033\n\005index\030\003 " +
+      "\002(\0132\014.jribble.AST2-\n\003aST\022\014.jribble.AST\030\354" +
+      "\007 \002(\0132\021.jribble.ArrayRef\"s\n\nAssignment\022\031",
       "\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014" +
-      ".jribble.AST2-\n\003aST\022\014.jribble.AST\030\226\010 \002(\013" +
-      "2\021.jribble.NotEqual\"c\n\002Or\022\031\n\003lhs\030\002 \002(\0132\014" +
-      ".jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST2",
-      "\'\n\003aST\022\014.jribble.AST\030\227\010 \002(\0132\013.jribble.Or" +
-      "\"E\n\007Package\022\014\n\004name\030\002 \002(\t2,\n\003aST\022\014.jribb" +
-      "le.AST\030\230\010 \002(\0132\020.jribble.Package\"b\n\010Param" +
-      "Def\022\014\n\004name\030\002 \002(\t\022\031\n\003typ\030\003 \002(\0132\014.jribble" +
-      ".AST2-\n\003aST\022\014.jribble.AST\030\231\010 \002(\0132\021.jribb" +
-      "le.ParamDef\"g\n\004Plus\022\031\n\003lhs\030\002 \002(\0132\014.jribb" +
-      "le.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST2)\n\003aST" +
-      "\022\014.jribble.AST\030\232\010 \002(\0132\r.jribble.Plus\"I\n\t" +
-      "Primitive\022\014\n\004name\030\002 \002(\t2.\n\003aST\022\014.jribble" +
-      ".AST\030\233\010 \002(\0132\022.jribble.Primitive\"X\n\003Ref\022\031",
-      "\n\003pkg\030\002 \001(\0132\014.jribble.AST\022\014\n\004name\030\003 \002(\t2" +
-      "(\n\003aST\022\014.jribble.AST\030\234\010 \002(\0132\014.jribble.Re" +
-      "f\"W\n\006Return\022 \n\nexpression\030\002 \001(\0132\014.jribbl" +
-      "e.AST2+\n\003aST\022\014.jribble.AST\030\235\010 \002(\0132\017.jrib" +
-      "ble.Return\"\247\001\n\tSignature\022\030\n\002on\030\002 \002(\0132\014.j" +
-      "ribble.AST\022\014\n\004name\030\003 \002(\t\022 \n\nparamTypes\030\004" +
-      " \003(\0132\014.jribble.AST\022 \n\nreturnType\030\005 \002(\0132\014" +
-      ".jribble.AST2.\n\003aST\022\014.jribble.AST\030\236\010 \002(\013" +
-      "2\022.jribble.Signature\"m\n\016StaticFieldRef\022\030" +
-      "\n\002on\030\002 \002(\0132\014.jribble.AST\022\014\n\004name\030\003 \002(\t23",
-      "\n\003aST\022\014.jribble.AST\030\237\010 \002(\0132\027.jribble.Sta" +
-      "ticFieldRef\"\250\001\n\020StaticMethodCall\022\036\n\010clas" +
-      "sRef\030\002 \002(\0132\014.jribble.AST\022\037\n\tsignature\030\003 " +
-      "\002(\0132\014.jribble.AST\022\034\n\006params\030\004 \003(\0132\014.jrib" +
-      "ble.AST25\n\003aST\022\014.jribble.AST\030\240\010 \002(\0132\031.jr" +
-      "ibble.StaticMethodCall\"N\n\rStringLiteral\022" +
-      "\t\n\001v\030\002 \002(\t22\n\003aST\022\014.jribble.AST\030\241\010 \002(\0132\026" +
-      ".jribble.StringLiteral\"\334\001\n\006Switch\022 \n\nexp" +
-      "ression\030\002 \002(\0132\014.jribble.AST\022&\n\006groups\030\003 " +
-      "\003(\n2\026.jribble.Switch.Groups\022\035\n\007default\030\004",
-      " \001(\0132\014.jribble.AST\032<\n\006Groups\022\030\n\002t0\030\r \002(\013" +
-      "2\014.jribble.AST\022\030\n\002t1\030\027 \002(\0132\014.jribble.AST" +
-      "2+\n\003aST\022\014.jribble.AST\030\242\010 \002(\0132\017.jribble.S" +
-      "witch\"U\n\005Throw\022 \n\nexpression\030\002 \002(\0132\014.jri" +
-      "bble.AST2*\n\003aST\022\014.jribble.AST\030\243\010 \002(\0132\016.j" +
-      "ribble.Throw\"\337\001\n\003Try\022\033\n\005block\030\002 \002(\0132\014.jr" +
-      "ibble.AST\022%\n\007catches\030\003 \003(\n2\024.jribble.Try" +
-      ".Catches\022\037\n\tfinalizer\030\004 \001(\0132\014.jribble.AS" +
-      "T\032I\n\007Catches\022\030\n\002t0\030\r \002(\0132\014.jribble.AST\022\n" +
-      "\n\002t1\030\027 \002(\t\022\030\n\002t2\030! \002(\0132\014.jribble.AST2(\n\003",
-      "aST\022\014.jribble.AST\030\244\010 \002(\0132\014.jribble.Try\"_" +
-      "\n\nUnaryMinus\022 \n\nexpression\030\002 \002(\0132\014.jribb" +
-      "le.AST2/\n\003aST\022\014.jribble.AST\030\245\010 \002(\0132\023.jri" +
-      "bble.UnaryMinus\"G\n\007UnaryOp\022\016\n\006symbol\030\002 \002" +
-      "(\t2,\n\003aST\022\014.jribble.AST\030\246\010 \002(\0132\020.jribble" +
-      ".UnaryOp\"{\n\006VarDef\022\031\n\003typ\030\002 \002(\0132\014.jribbl" +
-      "e.AST\022\014\n\004name\030\003 \002(\t\022\033\n\005value\030\004 \001(\0132\014.jri" +
-      "bble.AST2+\n\003aST\022\014.jribble.AST\030\247\010 \002(\0132\017.j" +
-      "ribble.VarDef\"C\n\006VarRef\022\014\n\004name\030\002 \002(\t2+\n" +
-      "\003aST\022\014.jribble.AST\030\250\010 \002(\0132\017.jribble.VarR",
-      "ef\"\200\001\n\005While\022\r\n\005label\030\002 \001(\t\022\037\n\tcondition" +
-      "\030\003 \002(\0132\014.jribble.AST\022\033\n\005block\030\004 \002(\0132\014.jr" +
-      "ibble.AST2*\n\003aST\022\014.jribble.AST\030\251\010 \002(\0132\016." +
-      "jribble.While\"y\n\014DeclaredType\022/\n\004type\030\001 " +
-      "\002(\0162!.jribble.DeclaredType.MessageType\"-" +
-      "\n\013MessageType\022\014\n\010ClassDef\020\001\022\020\n\014Interface" +
-      "Def\020\002*\t\010\350\007\020\200\200\200\200\002\"\320\001\n\010ClassDef\022\016\n\006modifs\030" +
-      "\002 \003(\t\022\032\n\004name\030\003 \002(\0132\014.jribble.AST\022\031\n\003ext" +
-      "\030\004 \001(\0132\014.jribble.AST\022 \n\nimplements\030\005 \003(\013" +
-      "2\014.jribble.AST\022\032\n\004body\030\006 \003(\0132\014.jribble.A",
-      "ST2?\n\014declaredType\022\025.jribble.DeclaredTyp" +
-      "e\030\350\007 \002(\0132\021.jribble.ClassDef\"\266\001\n\014Interfac" +
-      "eDef\022\016\n\006modifs\030\002 \003(\t\022\032\n\004name\030\003 \002(\0132\014.jri" +
-      "bble.AST\022\031\n\003ext\030\004 \003(\0132\014.jribble.AST\022\032\n\004b" +
-      "ody\030\005 \003(\0132\014.jribble.AST2C\n\014declaredType\022" +
-      "\025.jribble.DeclaredType\030\351\007 \002(\0132\025.jribble." +
-      "InterfaceDefB\'\n\026com.google.jribble.astB\r" +
-      "JribbleProtos"
+      ".jribble.AST2/\n\003aST\022\014.jribble.AST\030\355\007 \002(\013" +
+      "2\023.jribble.Assignment\"k\n\006BitAnd\022\031\n\003lhs\030\002" +
+      " \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribbl" +
+      "e.AST2+\n\003aST\022\014.jribble.AST\030\356\007 \002(\0132\017.jrib" +
+      "ble.BitAnd\"q\n\tBitLShift\022\031\n\003lhs\030\002 \002(\0132\014.j" +
+      "ribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST2.\n" +
+      "\003aST\022\014.jribble.AST\030\357\007 \002(\0132\022.jribble.BitL" +
+      "Shift\"W\n\006BitNot\022 \n\nexpression\030\002 \002(\0132\014.jr" +
+      "ibble.AST2+\n\003aST\022\014.jribble.AST\030\360\007 \002(\0132\017.",
+      "jribble.BitNot\"i\n\005BitOr\022\031\n\003lhs\030\002 \002(\0132\014.j" +
+      "ribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST2*\n" +
+      "\003aST\022\014.jribble.AST\030\361\007 \002(\0132\016.jribble.BitO" +
+      "r\"q\n\tBitRShift\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AS" +
+      "T\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST2.\n\003aST\022\014.jr" +
+      "ibble.AST\030\362\007 \002(\0132\022.jribble.BitRShift\"\201\001\n" +
+      "\021BitUnsignedRShift\022\031\n\003lhs\030\002 \002(\0132\014.jribbl" +
+      "e.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST26\n\003aST\022" +
+      "\014.jribble.AST\030\363\007 \002(\0132\032.jribble.BitUnsign" +
+      "edRShift\"k\n\006BitXor\022\031\n\003lhs\030\002 \002(\0132\014.jribbl",
+      "e.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST2+\n\003aST\022" +
+      "\014.jribble.AST\030\364\007 \002(\0132\017.jribble.BitXor\"U\n" +
+      "\005Block\022 \n\nstatements\030\002 \003(\0132\014.jribble.AST" +
+      "2*\n\003aST\022\014.jribble.AST\030\365\007 \002(\0132\016.jribble.B" +
+      "lock\"P\n\016BooleanLiteral\022\t\n\001v\030\002 \002(\01023\n\003aST" +
+      "\022\014.jribble.AST\030\366\007 \002(\0132\027.jribble.BooleanL" +
+      "iteral\"B\n\005Break\022\r\n\005label\030\002 \001(\t2*\n\003aST\022\014." +
+      "jribble.AST\030\367\007 \002(\0132\016.jribble.Break\"f\n\004Ca" +
+      "st\022\030\n\002on\030\002 \002(\0132\014.jribble.AST\022\031\n\003typ\030\003 \002(" +
+      "\0132\014.jribble.AST2)\n\003aST\022\014.jribble.AST\030\370\007 ",
+      "\002(\0132\r.jribble.Cast\"J\n\013CharLiteral\022\t\n\001v\030\002" +
+      " \002(\00520\n\003aST\022\014.jribble.AST\030\371\007 \002(\0132\024.jribb" +
+      "le.CharLiteral\"R\n\007ClassOf\022\031\n\003typ\030\002 \002(\0132\014" +
+      ".jribble.AST2,\n\003aST\022\014.jribble.AST\030\372\007 \002(\013" +
+      "2\020.jribble.ClassOf\"\264\001\n\013Conditional\022\037\n\tco" +
+      "ndition\030\002 \002(\0132\014.jribble.AST\022\031\n\003typ\030\003 \002(\013" +
+      "2\014.jribble.AST\022\032\n\004then\030\004 \002(\0132\014.jribble.A" +
+      "ST\022\033\n\005elsee\030\005 \002(\0132\014.jribble.AST20\n\003aST\022\014" +
+      ".jribble.AST\030\373\007 \002(\0132\024.jribble.Conditiona" +
+      "l\"\227\001\n\013Constructor\022\016\n\006modifs\030\002 \003(\t\022\014\n\004nam",
+      "e\030\003 \002(\t\022\034\n\006params\030\004 \003(\0132\014.jribble.AST\022\032\n" +
+      "\004body\030\005 \002(\0132\014.jribble.AST20\n\003aST\022\014.jribb" +
+      "le.AST\030\374\007 \002(\0132\024.jribble.Constructor\"\206\001\n\017" +
+      "ConstructorCall\022\037\n\tsignature\030\002 \002(\0132\014.jri" +
+      "bble.AST\022\034\n\006params\030\003 \003(\0132\014.jribble.AST24" +
+      "\n\003aST\022\014.jribble.AST\030\375\007 \002(\0132\030.jribble.Con" +
+      "structorCall\"H\n\010Continue\022\r\n\005label\030\002 \001(\t2" +
+      "-\n\003aST\022\014.jribble.AST\030\376\007 \002(\0132\021.jribble.Co" +
+      "ntinue\"k\n\006Divide\022\031\n\003lhs\030\002 \002(\0132\014.jribble." +
+      "AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST2+\n\003aST\022\014.",
+      "jribble.AST\030\377\007 \002(\0132\017.jribble.Divide\"N\n\rD" +
+      "oubleLiteral\022\t\n\001v\030\002 \002(\00122\n\003aST\022\014.jribble" +
+      ".AST\030\200\010 \002(\0132\026.jribble.DoubleLiteral\"i\n\005E" +
+      "qual\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003" +
+      " \002(\0132\014.jribble.AST2*\n\003aST\022\014.jribble.AST\030" +
+      "\201\010 \002(\0132\016.jribble.Equal\"\217\001\n\010FieldDef\022\016\n\006m" +
+      "odifs\030\002 \003(\t\022\031\n\003typ\030\003 \002(\0132\014.jribble.AST\022\014" +
+      "\n\004name\030\004 \002(\t\022\033\n\005value\030\005 \001(\0132\014.jribble.AS" +
+      "T2-\n\003aST\022\014.jribble.AST\030\202\010 \002(\0132\021.jribble." +
+      "FieldDef\"\177\n\010FieldRef\022\030\n\002on\030\002 \002(\0132\014.jribb",
+      "le.AST\022\034\n\006onType\030\003 \002(\0132\014.jribble.AST\022\014\n\004" +
+      "name\030\004 \002(\t2-\n\003aST\022\014.jribble.AST\030\203\010 \002(\0132\021" +
+      ".jribble.FieldRef\"L\n\014FloatLiteral\022\t\n\001v\030\002" +
+      " \002(\00221\n\003aST\022\014.jribble.AST\030\204\010 \002(\0132\025.jribb" +
+      "le.FloatLiteral\"m\n\007Greater\022\031\n\003lhs\030\002 \002(\0132" +
+      "\014.jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST" +
+      "2,\n\003aST\022\014.jribble.AST\030\205\010 \002(\0132\020.jribble.G" +
+      "reater\"{\n\016GreaterOrEqual\022\031\n\003lhs\030\002 \002(\0132\014." +
+      "jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST23" +
+      "\n\003aST\022\014.jribble.AST\030\206\010 \002(\0132\027.jribble.Gre",
+      "aterOrEqual\"\207\001\n\002If\022\037\n\tcondition\030\002 \002(\0132\014." +
+      "jribble.AST\022\032\n\004then\030\003 \002(\0132\014.jribble.AST\022" +
+      "\033\n\005elsee\030\004 \001(\0132\014.jribble.AST2\'\n\003aST\022\014.jr" +
+      "ibble.AST\030\207\010 \002(\0132\013.jribble.If\"r\n\nInstanc" +
+      "eOf\022\030\n\002on\030\002 \002(\0132\014.jribble.AST\022\031\n\003typ\030\003 \002" +
+      "(\0132\014.jribble.AST2/\n\003aST\022\014.jribble.AST\030\210\010" +
+      " \002(\0132\023.jribble.InstanceOf\"H\n\nIntLiteral\022" +
+      "\t\n\001v\030\002 \002(\0052/\n\003aST\022\014.jribble.AST\030\211\010 \002(\0132\023" +
+      ".jribble.IntLiteral\"k\n\006Lesser\022\031\n\003lhs\030\002 \002" +
+      "(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.",
+      "AST2+\n\003aST\022\014.jribble.AST\030\212\010 \002(\0132\017.jribbl" +
+      "e.Lesser\"y\n\rLesserOrEqual\022\031\n\003lhs\030\002 \002(\0132\014" +
+      ".jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST2" +
+      "2\n\003aST\022\014.jribble.AST\030\213\010 \002(\0132\026.jribble.Le" +
+      "sserOrEqual\"J\n\013LongLiteral\022\t\n\001v\030\002 \002(\00320\n" +
+      "\003aST\022\014.jribble.AST\030\214\010 \002(\0132\024.jribble.Long" +
+      "Literal\"\226\001\n\nMethodCall\022\030\n\002on\030\002 \002(\0132\014.jri" +
+      "bble.AST\022\037\n\tsignature\030\003 \002(\0132\014.jribble.AS" +
+      "T\022\034\n\006params\030\004 \003(\0132\014.jribble.AST2/\n\003aST\022\014" +
+      ".jribble.AST\030\215\010 \002(\0132\023.jribble.MethodCall",
+      "\"\265\001\n\tMethodDef\022\016\n\006modifs\030\002 \003(\t\022 \n\nreturn" +
+      "Type\030\003 \002(\0132\014.jribble.AST\022\014\n\004name\030\004 \002(\t\022\034" +
+      "\n\006params\030\005 \003(\0132\014.jribble.AST\022\032\n\004body\030\006 \001" +
+      "(\0132\014.jribble.AST2.\n\003aST\022\014.jribble.AST\030\216\010" +
+      " \002(\0132\022.jribble.MethodDef\"i\n\005Minus\022\031\n\003lhs" +
+      "\030\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jrib" +
+      "ble.AST2*\n\003aST\022\014.jribble.AST\030\217\010 \002(\0132\016.jr" +
+      "ibble.Minus\"m\n\007Modulus\022\031\n\003lhs\030\002 \002(\0132\014.jr" +
+      "ibble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST2,\n\003" +
+      "aST\022\014.jribble.AST\030\220\010 \002(\0132\020.jribble.Modul",
+      "us\"o\n\010Multiply\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AS" +
+      "T\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST2-\n\003aST\022\014.jr" +
+      "ibble.AST\030\221\010 \002(\0132\021.jribble.Multiply\"\233\001\n\010" +
+      "NewArray\022\031\n\003typ\030\002 \002(\0132\014.jribble.AST\022$\n\004d" +
+      "ims\030\003 \003(\n2\026.jribble.NewArray.Dims\032\037\n\004Dim" +
+      "s\022\027\n\001t\030\r \001(\0132\014.jribble.AST2-\n\003aST\022\014.jrib" +
+      "ble.AST\030\222\010 \002(\0132\021.jribble.NewArray\"Z\n\007New" +
+      "Call\022!\n\013constructor\030\002 \002(\0132\014.jribble.AST2" +
+      ",\n\003aST\022\014.jribble.AST\030\223\010 \002(\0132\020.jribble.Ne" +
+      "wCall\"Q\n\003Not\022 \n\nexpression\030\002 \002(\0132\014.jribb",
+      "le.AST2(\n\003aST\022\014.jribble.AST\030\224\010 \002(\0132\014.jri" +
+      "bble.Not\"o\n\010NotEqual\022\031\n\003lhs\030\002 \002(\0132\014.jrib" +
+      "ble.AST\022\031\n\003rhs\030\003 \002(\0132\014.jribble.AST2-\n\003aS" +
+      "T\022\014.jribble.AST\030\225\010 \002(\0132\021.jribble.NotEqua" +
+      "l\"c\n\002Or\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003rh" +
+      "s\030\003 \002(\0132\014.jribble.AST2\'\n\003aST\022\014.jribble.A" +
+      "ST\030\226\010 \002(\0132\013.jribble.Or\"E\n\007Package\022\014\n\004nam" +
+      "e\030\002 \002(\t2,\n\003aST\022\014.jribble.AST\030\227\010 \002(\0132\020.jr" +
+      "ibble.Package\"b\n\010ParamDef\022\014\n\004name\030\002 \002(\t\022" +
+      "\031\n\003typ\030\003 \002(\0132\014.jribble.AST2-\n\003aST\022\014.jrib",
+      "ble.AST\030\230\010 \002(\0132\021.jribble.ParamDef\"g\n\004Plu" +
+      "s\022\031\n\003lhs\030\002 \002(\0132\014.jribble.AST\022\031\n\003rhs\030\003 \002(" +
+      "\0132\014.jribble.AST2)\n\003aST\022\014.jribble.AST\030\231\010 " +
+      "\002(\0132\r.jribble.Plus\"I\n\tPrimitive\022\014\n\004name\030" +
+      "\002 \002(\t2.\n\003aST\022\014.jribble.AST\030\232\010 \002(\0132\022.jrib" +
+      "ble.Primitive\"X\n\003Ref\022\031\n\003pkg\030\002 \001(\0132\014.jrib" +
+      "ble.AST\022\014\n\004name\030\003 \002(\t2(\n\003aST\022\014.jribble.A" +
+      "ST\030\233\010 \002(\0132\014.jribble.Ref\"W\n\006Return\022 \n\nexp" +
+      "ression\030\002 \001(\0132\014.jribble.AST2+\n\003aST\022\014.jri" +
+      "bble.AST\030\234\010 \002(\0132\017.jribble.Return\"\247\001\n\tSig",
+      "nature\022\030\n\002on\030\002 \002(\0132\014.jribble.AST\022\014\n\004name" +
+      "\030\003 \002(\t\022 \n\nparamTypes\030\004 \003(\0132\014.jribble.AST" +
+      "\022 \n\nreturnType\030\005 \002(\0132\014.jribble.AST2.\n\003aS" +
+      "T\022\014.jribble.AST\030\235\010 \002(\0132\022.jribble.Signatu" +
+      "re\"m\n\016StaticFieldRef\022\030\n\002on\030\002 \002(\0132\014.jribb" +
+      "le.AST\022\014\n\004name\030\003 \002(\t23\n\003aST\022\014.jribble.AS" +
+      "T\030\236\010 \002(\0132\027.jribble.StaticFieldRef\"\250\001\n\020St" +
+      "aticMethodCall\022\036\n\010classRef\030\002 \002(\0132\014.jribb" +
+      "le.AST\022\037\n\tsignature\030\003 \002(\0132\014.jribble.AST\022" +
+      "\034\n\006params\030\004 \003(\0132\014.jribble.AST25\n\003aST\022\014.j",
+      "ribble.AST\030\237\010 \002(\0132\031.jribble.StaticMethod" +
+      "Call\"N\n\rStringLiteral\022\t\n\001v\030\002 \002(\t22\n\003aST\022" +
+      "\014.jribble.AST\030\240\010 \002(\0132\026.jribble.StringLit" +
+      "eral\"\334\001\n\006Switch\022 \n\nexpression\030\002 \002(\0132\014.jr" +
+      "ibble.AST\022&\n\006groups\030\003 \003(\n2\026.jribble.Swit" +
+      "ch.Groups\022\035\n\007default\030\004 \001(\0132\014.jribble.AST" +
+      "\032<\n\006Groups\022\030\n\002t0\030\r \002(\0132\014.jribble.AST\022\030\n\002" +
+      "t1\030\027 \002(\0132\014.jribble.AST2+\n\003aST\022\014.jribble." +
+      "AST\030\241\010 \002(\0132\017.jribble.Switch\"U\n\005Throw\022 \n\n" +
+      "expression\030\002 \002(\0132\014.jribble.AST2*\n\003aST\022\014.",
+      "jribble.AST\030\242\010 \002(\0132\016.jribble.Throw\"\337\001\n\003T" +
+      "ry\022\033\n\005block\030\002 \002(\0132\014.jribble.AST\022%\n\007catch" +
+      "es\030\003 \003(\n2\024.jribble.Try.Catches\022\037\n\tfinali" +
+      "zer\030\004 \001(\0132\014.jribble.AST\032I\n\007Catches\022\030\n\002t0" +
+      "\030\r \002(\0132\014.jribble.AST\022\n\n\002t1\030\027 \002(\t\022\030\n\002t2\030!" +
+      " \002(\0132\014.jribble.AST2(\n\003aST\022\014.jribble.AST\030" +
+      "\243\010 \002(\0132\014.jribble.Try\"_\n\nUnaryMinus\022 \n\nex" +
+      "pression\030\002 \002(\0132\014.jribble.AST2/\n\003aST\022\014.jr" +
+      "ibble.AST\030\244\010 \002(\0132\023.jribble.UnaryMinus\"{\n" +
+      "\006VarDef\022\031\n\003typ\030\002 \002(\0132\014.jribble.AST\022\014\n\004na",
+      "me\030\003 \002(\t\022\033\n\005value\030\004 \001(\0132\014.jribble.AST2+\n" +
+      "\003aST\022\014.jribble.AST\030\245\010 \002(\0132\017.jribble.VarD" +
+      "ef\"C\n\006VarRef\022\014\n\004name\030\002 \002(\t2+\n\003aST\022\014.jrib" +
+      "ble.AST\030\246\010 \002(\0132\017.jribble.VarRef\"\200\001\n\005Whil" +
+      "e\022\r\n\005label\030\002 \001(\t\022\037\n\tcondition\030\003 \002(\0132\014.jr" +
+      "ibble.AST\022\033\n\005block\030\004 \002(\0132\014.jribble.AST2*" +
+      "\n\003aST\022\014.jribble.AST\030\247\010 \002(\0132\016.jribble.Whi" +
+      "le\"y\n\014DeclaredType\022/\n\004type\030\001 \002(\0162!.jribb" +
+      "le.DeclaredType.MessageType\"-\n\013MessageTy" +
+      "pe\022\014\n\010ClassDef\020\001\022\020\n\014InterfaceDef\020\002*\t\010\350\007\020",
+      "\200\200\200\200\002\"\320\001\n\010ClassDef\022\016\n\006modifs\030\002 \003(\t\022\032\n\004na" +
+      "me\030\003 \002(\0132\014.jribble.AST\022\031\n\003ext\030\004 \001(\0132\014.jr" +
+      "ibble.AST\022 \n\nimplements\030\005 \003(\0132\014.jribble." +
+      "AST\022\032\n\004body\030\006 \003(\0132\014.jribble.AST2?\n\014decla" +
+      "redType\022\025.jribble.DeclaredType\030\350\007 \002(\0132\021." +
+      "jribble.ClassDef\"\266\001\n\014InterfaceDef\022\016\n\006mod" +
+      "ifs\030\002 \003(\t\022\032\n\004name\030\003 \002(\0132\014.jribble.AST\022\031\n" +
+      "\003ext\030\004 \003(\0132\014.jribble.AST\022\032\n\004body\030\005 \003(\0132\014" +
+      ".jribble.AST2C\n\014declaredType\022\025.jribble.D" +
+      "eclaredType\030\351\007 \002(\0132\025.jribble.InterfaceDe",
+      "fB\'\n\026com.google.jribble.astB\rJribbleProt" +
+      "os"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -44982,16 +44157,8 @@ public final class JribbleProtos {
               new java.lang.String[] { "Lhs", "Rhs", },
               com.google.jribble.ast.JribbleProtos.Assignment.class,
               com.google.jribble.ast.JribbleProtos.Assignment.Builder.class);
-          internal_static_jribble_BinaryOp_descriptor =
-            getDescriptor().getMessageTypes().get(7);
-          internal_static_jribble_BinaryOp_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_jribble_BinaryOp_descriptor,
-              new java.lang.String[] { "Symbol", },
-              com.google.jribble.ast.JribbleProtos.BinaryOp.class,
-              com.google.jribble.ast.JribbleProtos.BinaryOp.Builder.class);
           internal_static_jribble_BitAnd_descriptor =
-            getDescriptor().getMessageTypes().get(8);
+            getDescriptor().getMessageTypes().get(7);
           internal_static_jribble_BitAnd_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_BitAnd_descriptor,
@@ -44999,7 +44166,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.BitAnd.class,
               com.google.jribble.ast.JribbleProtos.BitAnd.Builder.class);
           internal_static_jribble_BitLShift_descriptor =
-            getDescriptor().getMessageTypes().get(9);
+            getDescriptor().getMessageTypes().get(8);
           internal_static_jribble_BitLShift_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_BitLShift_descriptor,
@@ -45007,7 +44174,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.BitLShift.class,
               com.google.jribble.ast.JribbleProtos.BitLShift.Builder.class);
           internal_static_jribble_BitNot_descriptor =
-            getDescriptor().getMessageTypes().get(10);
+            getDescriptor().getMessageTypes().get(9);
           internal_static_jribble_BitNot_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_BitNot_descriptor,
@@ -45015,7 +44182,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.BitNot.class,
               com.google.jribble.ast.JribbleProtos.BitNot.Builder.class);
           internal_static_jribble_BitOr_descriptor =
-            getDescriptor().getMessageTypes().get(11);
+            getDescriptor().getMessageTypes().get(10);
           internal_static_jribble_BitOr_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_BitOr_descriptor,
@@ -45023,7 +44190,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.BitOr.class,
               com.google.jribble.ast.JribbleProtos.BitOr.Builder.class);
           internal_static_jribble_BitRShift_descriptor =
-            getDescriptor().getMessageTypes().get(12);
+            getDescriptor().getMessageTypes().get(11);
           internal_static_jribble_BitRShift_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_BitRShift_descriptor,
@@ -45031,7 +44198,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.BitRShift.class,
               com.google.jribble.ast.JribbleProtos.BitRShift.Builder.class);
           internal_static_jribble_BitUnsignedRShift_descriptor =
-            getDescriptor().getMessageTypes().get(13);
+            getDescriptor().getMessageTypes().get(12);
           internal_static_jribble_BitUnsignedRShift_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_BitUnsignedRShift_descriptor,
@@ -45039,7 +44206,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.BitUnsignedRShift.class,
               com.google.jribble.ast.JribbleProtos.BitUnsignedRShift.Builder.class);
           internal_static_jribble_BitXor_descriptor =
-            getDescriptor().getMessageTypes().get(14);
+            getDescriptor().getMessageTypes().get(13);
           internal_static_jribble_BitXor_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_BitXor_descriptor,
@@ -45047,7 +44214,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.BitXor.class,
               com.google.jribble.ast.JribbleProtos.BitXor.Builder.class);
           internal_static_jribble_Block_descriptor =
-            getDescriptor().getMessageTypes().get(15);
+            getDescriptor().getMessageTypes().get(14);
           internal_static_jribble_Block_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Block_descriptor,
@@ -45055,7 +44222,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Block.class,
               com.google.jribble.ast.JribbleProtos.Block.Builder.class);
           internal_static_jribble_BooleanLiteral_descriptor =
-            getDescriptor().getMessageTypes().get(16);
+            getDescriptor().getMessageTypes().get(15);
           internal_static_jribble_BooleanLiteral_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_BooleanLiteral_descriptor,
@@ -45063,7 +44230,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.BooleanLiteral.class,
               com.google.jribble.ast.JribbleProtos.BooleanLiteral.Builder.class);
           internal_static_jribble_Break_descriptor =
-            getDescriptor().getMessageTypes().get(17);
+            getDescriptor().getMessageTypes().get(16);
           internal_static_jribble_Break_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Break_descriptor,
@@ -45071,7 +44238,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Break.class,
               com.google.jribble.ast.JribbleProtos.Break.Builder.class);
           internal_static_jribble_Cast_descriptor =
-            getDescriptor().getMessageTypes().get(18);
+            getDescriptor().getMessageTypes().get(17);
           internal_static_jribble_Cast_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Cast_descriptor,
@@ -45079,7 +44246,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Cast.class,
               com.google.jribble.ast.JribbleProtos.Cast.Builder.class);
           internal_static_jribble_CharLiteral_descriptor =
-            getDescriptor().getMessageTypes().get(19);
+            getDescriptor().getMessageTypes().get(18);
           internal_static_jribble_CharLiteral_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_CharLiteral_descriptor,
@@ -45087,7 +44254,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.CharLiteral.class,
               com.google.jribble.ast.JribbleProtos.CharLiteral.Builder.class);
           internal_static_jribble_ClassOf_descriptor =
-            getDescriptor().getMessageTypes().get(20);
+            getDescriptor().getMessageTypes().get(19);
           internal_static_jribble_ClassOf_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_ClassOf_descriptor,
@@ -45095,7 +44262,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.ClassOf.class,
               com.google.jribble.ast.JribbleProtos.ClassOf.Builder.class);
           internal_static_jribble_Conditional_descriptor =
-            getDescriptor().getMessageTypes().get(21);
+            getDescriptor().getMessageTypes().get(20);
           internal_static_jribble_Conditional_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Conditional_descriptor,
@@ -45103,7 +44270,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Conditional.class,
               com.google.jribble.ast.JribbleProtos.Conditional.Builder.class);
           internal_static_jribble_Constructor_descriptor =
-            getDescriptor().getMessageTypes().get(22);
+            getDescriptor().getMessageTypes().get(21);
           internal_static_jribble_Constructor_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Constructor_descriptor,
@@ -45111,7 +44278,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Constructor.class,
               com.google.jribble.ast.JribbleProtos.Constructor.Builder.class);
           internal_static_jribble_ConstructorCall_descriptor =
-            getDescriptor().getMessageTypes().get(23);
+            getDescriptor().getMessageTypes().get(22);
           internal_static_jribble_ConstructorCall_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_ConstructorCall_descriptor,
@@ -45119,7 +44286,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.ConstructorCall.class,
               com.google.jribble.ast.JribbleProtos.ConstructorCall.Builder.class);
           internal_static_jribble_Continue_descriptor =
-            getDescriptor().getMessageTypes().get(24);
+            getDescriptor().getMessageTypes().get(23);
           internal_static_jribble_Continue_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Continue_descriptor,
@@ -45127,7 +44294,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Continue.class,
               com.google.jribble.ast.JribbleProtos.Continue.Builder.class);
           internal_static_jribble_Divide_descriptor =
-            getDescriptor().getMessageTypes().get(25);
+            getDescriptor().getMessageTypes().get(24);
           internal_static_jribble_Divide_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Divide_descriptor,
@@ -45135,7 +44302,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Divide.class,
               com.google.jribble.ast.JribbleProtos.Divide.Builder.class);
           internal_static_jribble_DoubleLiteral_descriptor =
-            getDescriptor().getMessageTypes().get(26);
+            getDescriptor().getMessageTypes().get(25);
           internal_static_jribble_DoubleLiteral_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_DoubleLiteral_descriptor,
@@ -45143,7 +44310,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.DoubleLiteral.class,
               com.google.jribble.ast.JribbleProtos.DoubleLiteral.Builder.class);
           internal_static_jribble_Equal_descriptor =
-            getDescriptor().getMessageTypes().get(27);
+            getDescriptor().getMessageTypes().get(26);
           internal_static_jribble_Equal_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Equal_descriptor,
@@ -45151,7 +44318,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Equal.class,
               com.google.jribble.ast.JribbleProtos.Equal.Builder.class);
           internal_static_jribble_FieldDef_descriptor =
-            getDescriptor().getMessageTypes().get(28);
+            getDescriptor().getMessageTypes().get(27);
           internal_static_jribble_FieldDef_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_FieldDef_descriptor,
@@ -45159,7 +44326,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.FieldDef.class,
               com.google.jribble.ast.JribbleProtos.FieldDef.Builder.class);
           internal_static_jribble_FieldRef_descriptor =
-            getDescriptor().getMessageTypes().get(29);
+            getDescriptor().getMessageTypes().get(28);
           internal_static_jribble_FieldRef_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_FieldRef_descriptor,
@@ -45167,7 +44334,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.FieldRef.class,
               com.google.jribble.ast.JribbleProtos.FieldRef.Builder.class);
           internal_static_jribble_FloatLiteral_descriptor =
-            getDescriptor().getMessageTypes().get(30);
+            getDescriptor().getMessageTypes().get(29);
           internal_static_jribble_FloatLiteral_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_FloatLiteral_descriptor,
@@ -45175,7 +44342,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.FloatLiteral.class,
               com.google.jribble.ast.JribbleProtos.FloatLiteral.Builder.class);
           internal_static_jribble_Greater_descriptor =
-            getDescriptor().getMessageTypes().get(31);
+            getDescriptor().getMessageTypes().get(30);
           internal_static_jribble_Greater_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Greater_descriptor,
@@ -45183,7 +44350,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Greater.class,
               com.google.jribble.ast.JribbleProtos.Greater.Builder.class);
           internal_static_jribble_GreaterOrEqual_descriptor =
-            getDescriptor().getMessageTypes().get(32);
+            getDescriptor().getMessageTypes().get(31);
           internal_static_jribble_GreaterOrEqual_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_GreaterOrEqual_descriptor,
@@ -45191,7 +44358,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.GreaterOrEqual.class,
               com.google.jribble.ast.JribbleProtos.GreaterOrEqual.Builder.class);
           internal_static_jribble_If_descriptor =
-            getDescriptor().getMessageTypes().get(33);
+            getDescriptor().getMessageTypes().get(32);
           internal_static_jribble_If_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_If_descriptor,
@@ -45199,7 +44366,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.If.class,
               com.google.jribble.ast.JribbleProtos.If.Builder.class);
           internal_static_jribble_InstanceOf_descriptor =
-            getDescriptor().getMessageTypes().get(34);
+            getDescriptor().getMessageTypes().get(33);
           internal_static_jribble_InstanceOf_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_InstanceOf_descriptor,
@@ -45207,7 +44374,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.InstanceOf.class,
               com.google.jribble.ast.JribbleProtos.InstanceOf.Builder.class);
           internal_static_jribble_IntLiteral_descriptor =
-            getDescriptor().getMessageTypes().get(35);
+            getDescriptor().getMessageTypes().get(34);
           internal_static_jribble_IntLiteral_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_IntLiteral_descriptor,
@@ -45215,7 +44382,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.IntLiteral.class,
               com.google.jribble.ast.JribbleProtos.IntLiteral.Builder.class);
           internal_static_jribble_Lesser_descriptor =
-            getDescriptor().getMessageTypes().get(36);
+            getDescriptor().getMessageTypes().get(35);
           internal_static_jribble_Lesser_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Lesser_descriptor,
@@ -45223,7 +44390,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Lesser.class,
               com.google.jribble.ast.JribbleProtos.Lesser.Builder.class);
           internal_static_jribble_LesserOrEqual_descriptor =
-            getDescriptor().getMessageTypes().get(37);
+            getDescriptor().getMessageTypes().get(36);
           internal_static_jribble_LesserOrEqual_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_LesserOrEqual_descriptor,
@@ -45231,7 +44398,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.LesserOrEqual.class,
               com.google.jribble.ast.JribbleProtos.LesserOrEqual.Builder.class);
           internal_static_jribble_LongLiteral_descriptor =
-            getDescriptor().getMessageTypes().get(38);
+            getDescriptor().getMessageTypes().get(37);
           internal_static_jribble_LongLiteral_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_LongLiteral_descriptor,
@@ -45239,7 +44406,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.LongLiteral.class,
               com.google.jribble.ast.JribbleProtos.LongLiteral.Builder.class);
           internal_static_jribble_MethodCall_descriptor =
-            getDescriptor().getMessageTypes().get(39);
+            getDescriptor().getMessageTypes().get(38);
           internal_static_jribble_MethodCall_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_MethodCall_descriptor,
@@ -45247,7 +44414,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.MethodCall.class,
               com.google.jribble.ast.JribbleProtos.MethodCall.Builder.class);
           internal_static_jribble_MethodDef_descriptor =
-            getDescriptor().getMessageTypes().get(40);
+            getDescriptor().getMessageTypes().get(39);
           internal_static_jribble_MethodDef_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_MethodDef_descriptor,
@@ -45255,7 +44422,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.MethodDef.class,
               com.google.jribble.ast.JribbleProtos.MethodDef.Builder.class);
           internal_static_jribble_Minus_descriptor =
-            getDescriptor().getMessageTypes().get(41);
+            getDescriptor().getMessageTypes().get(40);
           internal_static_jribble_Minus_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Minus_descriptor,
@@ -45263,7 +44430,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Minus.class,
               com.google.jribble.ast.JribbleProtos.Minus.Builder.class);
           internal_static_jribble_Modulus_descriptor =
-            getDescriptor().getMessageTypes().get(42);
+            getDescriptor().getMessageTypes().get(41);
           internal_static_jribble_Modulus_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Modulus_descriptor,
@@ -45271,7 +44438,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Modulus.class,
               com.google.jribble.ast.JribbleProtos.Modulus.Builder.class);
           internal_static_jribble_Multiply_descriptor =
-            getDescriptor().getMessageTypes().get(43);
+            getDescriptor().getMessageTypes().get(42);
           internal_static_jribble_Multiply_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Multiply_descriptor,
@@ -45279,7 +44446,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Multiply.class,
               com.google.jribble.ast.JribbleProtos.Multiply.Builder.class);
           internal_static_jribble_NewArray_descriptor =
-            getDescriptor().getMessageTypes().get(44);
+            getDescriptor().getMessageTypes().get(43);
           internal_static_jribble_NewArray_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_NewArray_descriptor,
@@ -45295,7 +44462,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.NewArray.Dims.class,
               com.google.jribble.ast.JribbleProtos.NewArray.Dims.Builder.class);
           internal_static_jribble_NewCall_descriptor =
-            getDescriptor().getMessageTypes().get(45);
+            getDescriptor().getMessageTypes().get(44);
           internal_static_jribble_NewCall_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_NewCall_descriptor,
@@ -45303,7 +44470,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.NewCall.class,
               com.google.jribble.ast.JribbleProtos.NewCall.Builder.class);
           internal_static_jribble_Not_descriptor =
-            getDescriptor().getMessageTypes().get(46);
+            getDescriptor().getMessageTypes().get(45);
           internal_static_jribble_Not_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Not_descriptor,
@@ -45311,7 +44478,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Not.class,
               com.google.jribble.ast.JribbleProtos.Not.Builder.class);
           internal_static_jribble_NotEqual_descriptor =
-            getDescriptor().getMessageTypes().get(47);
+            getDescriptor().getMessageTypes().get(46);
           internal_static_jribble_NotEqual_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_NotEqual_descriptor,
@@ -45319,7 +44486,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.NotEqual.class,
               com.google.jribble.ast.JribbleProtos.NotEqual.Builder.class);
           internal_static_jribble_Or_descriptor =
-            getDescriptor().getMessageTypes().get(48);
+            getDescriptor().getMessageTypes().get(47);
           internal_static_jribble_Or_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Or_descriptor,
@@ -45327,7 +44494,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Or.class,
               com.google.jribble.ast.JribbleProtos.Or.Builder.class);
           internal_static_jribble_Package_descriptor =
-            getDescriptor().getMessageTypes().get(49);
+            getDescriptor().getMessageTypes().get(48);
           internal_static_jribble_Package_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Package_descriptor,
@@ -45335,7 +44502,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Package.class,
               com.google.jribble.ast.JribbleProtos.Package.Builder.class);
           internal_static_jribble_ParamDef_descriptor =
-            getDescriptor().getMessageTypes().get(50);
+            getDescriptor().getMessageTypes().get(49);
           internal_static_jribble_ParamDef_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_ParamDef_descriptor,
@@ -45343,7 +44510,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.ParamDef.class,
               com.google.jribble.ast.JribbleProtos.ParamDef.Builder.class);
           internal_static_jribble_Plus_descriptor =
-            getDescriptor().getMessageTypes().get(51);
+            getDescriptor().getMessageTypes().get(50);
           internal_static_jribble_Plus_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Plus_descriptor,
@@ -45351,7 +44518,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Plus.class,
               com.google.jribble.ast.JribbleProtos.Plus.Builder.class);
           internal_static_jribble_Primitive_descriptor =
-            getDescriptor().getMessageTypes().get(52);
+            getDescriptor().getMessageTypes().get(51);
           internal_static_jribble_Primitive_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Primitive_descriptor,
@@ -45359,7 +44526,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Primitive.class,
               com.google.jribble.ast.JribbleProtos.Primitive.Builder.class);
           internal_static_jribble_Ref_descriptor =
-            getDescriptor().getMessageTypes().get(53);
+            getDescriptor().getMessageTypes().get(52);
           internal_static_jribble_Ref_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Ref_descriptor,
@@ -45367,7 +44534,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Ref.class,
               com.google.jribble.ast.JribbleProtos.Ref.Builder.class);
           internal_static_jribble_Return_descriptor =
-            getDescriptor().getMessageTypes().get(54);
+            getDescriptor().getMessageTypes().get(53);
           internal_static_jribble_Return_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Return_descriptor,
@@ -45375,7 +44542,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Return.class,
               com.google.jribble.ast.JribbleProtos.Return.Builder.class);
           internal_static_jribble_Signature_descriptor =
-            getDescriptor().getMessageTypes().get(55);
+            getDescriptor().getMessageTypes().get(54);
           internal_static_jribble_Signature_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Signature_descriptor,
@@ -45383,7 +44550,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Signature.class,
               com.google.jribble.ast.JribbleProtos.Signature.Builder.class);
           internal_static_jribble_StaticFieldRef_descriptor =
-            getDescriptor().getMessageTypes().get(56);
+            getDescriptor().getMessageTypes().get(55);
           internal_static_jribble_StaticFieldRef_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_StaticFieldRef_descriptor,
@@ -45391,7 +44558,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.StaticFieldRef.class,
               com.google.jribble.ast.JribbleProtos.StaticFieldRef.Builder.class);
           internal_static_jribble_StaticMethodCall_descriptor =
-            getDescriptor().getMessageTypes().get(57);
+            getDescriptor().getMessageTypes().get(56);
           internal_static_jribble_StaticMethodCall_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_StaticMethodCall_descriptor,
@@ -45399,7 +44566,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.StaticMethodCall.class,
               com.google.jribble.ast.JribbleProtos.StaticMethodCall.Builder.class);
           internal_static_jribble_StringLiteral_descriptor =
-            getDescriptor().getMessageTypes().get(58);
+            getDescriptor().getMessageTypes().get(57);
           internal_static_jribble_StringLiteral_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_StringLiteral_descriptor,
@@ -45407,7 +44574,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.StringLiteral.class,
               com.google.jribble.ast.JribbleProtos.StringLiteral.Builder.class);
           internal_static_jribble_Switch_descriptor =
-            getDescriptor().getMessageTypes().get(59);
+            getDescriptor().getMessageTypes().get(58);
           internal_static_jribble_Switch_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Switch_descriptor,
@@ -45423,7 +44590,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Switch.Groups.class,
               com.google.jribble.ast.JribbleProtos.Switch.Groups.Builder.class);
           internal_static_jribble_Throw_descriptor =
-            getDescriptor().getMessageTypes().get(60);
+            getDescriptor().getMessageTypes().get(59);
           internal_static_jribble_Throw_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Throw_descriptor,
@@ -45431,7 +44598,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Throw.class,
               com.google.jribble.ast.JribbleProtos.Throw.Builder.class);
           internal_static_jribble_Try_descriptor =
-            getDescriptor().getMessageTypes().get(61);
+            getDescriptor().getMessageTypes().get(60);
           internal_static_jribble_Try_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_Try_descriptor,
@@ -45447,23 +44614,15 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.Try.Catches.class,
               com.google.jribble.ast.JribbleProtos.Try.Catches.Builder.class);
           internal_static_jribble_UnaryMinus_descriptor =
-            getDescriptor().getMessageTypes().get(62);
+            getDescriptor().getMessageTypes().get(61);
           internal_static_jribble_UnaryMinus_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_UnaryMinus_descriptor,
               new java.lang.String[] { "Expression", },
               com.google.jribble.ast.JribbleProtos.UnaryMinus.class,
               com.google.jribble.ast.JribbleProtos.UnaryMinus.Builder.class);
-          internal_static_jribble_UnaryOp_descriptor =
-            getDescriptor().getMessageTypes().get(63);
-          internal_static_jribble_UnaryOp_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_jribble_UnaryOp_descriptor,
-              new java.lang.String[] { "Symbol", },
-              com.google.jribble.ast.JribbleProtos.UnaryOp.class,
-              com.google.jribble.ast.JribbleProtos.UnaryOp.Builder.class);
           internal_static_jribble_VarDef_descriptor =
-            getDescriptor().getMessageTypes().get(64);
+            getDescriptor().getMessageTypes().get(62);
           internal_static_jribble_VarDef_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_VarDef_descriptor,
@@ -45471,7 +44630,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.VarDef.class,
               com.google.jribble.ast.JribbleProtos.VarDef.Builder.class);
           internal_static_jribble_VarRef_descriptor =
-            getDescriptor().getMessageTypes().get(65);
+            getDescriptor().getMessageTypes().get(63);
           internal_static_jribble_VarRef_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_VarRef_descriptor,
@@ -45479,7 +44638,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.VarRef.class,
               com.google.jribble.ast.JribbleProtos.VarRef.Builder.class);
           internal_static_jribble_While_descriptor =
-            getDescriptor().getMessageTypes().get(66);
+            getDescriptor().getMessageTypes().get(64);
           internal_static_jribble_While_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_While_descriptor,
@@ -45487,7 +44646,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.While.class,
               com.google.jribble.ast.JribbleProtos.While.Builder.class);
           internal_static_jribble_DeclaredType_descriptor =
-            getDescriptor().getMessageTypes().get(67);
+            getDescriptor().getMessageTypes().get(65);
           internal_static_jribble_DeclaredType_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_DeclaredType_descriptor,
@@ -45495,7 +44654,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.DeclaredType.class,
               com.google.jribble.ast.JribbleProtos.DeclaredType.Builder.class);
           internal_static_jribble_ClassDef_descriptor =
-            getDescriptor().getMessageTypes().get(68);
+            getDescriptor().getMessageTypes().get(66);
           internal_static_jribble_ClassDef_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_ClassDef_descriptor,
@@ -45503,7 +44662,7 @@ public final class JribbleProtos {
               com.google.jribble.ast.JribbleProtos.ClassDef.class,
               com.google.jribble.ast.JribbleProtos.ClassDef.Builder.class);
           internal_static_jribble_InterfaceDef_descriptor =
-            getDescriptor().getMessageTypes().get(69);
+            getDescriptor().getMessageTypes().get(67);
           internal_static_jribble_InterfaceDef_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_jribble_InterfaceDef_descriptor,

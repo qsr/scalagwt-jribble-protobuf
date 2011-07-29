@@ -1,14 +1,14 @@
-AST
-DeclaredType
+abstract AST
+abstract DeclaredType
 Package(name: String) extends AST
-ClassBodyElement extends AST
+abstract ClassBodyElement extends AST
 ClassDef(modifs: Set[String], name: Ref, ext: Option[Ref], implements: List[Ref], body: List[ClassBodyElement]) extends DeclaredType
 InterfaceDef(modifs: Set[String], name: Ref, ext: List[Ref], body: List[MethodDef]) extends DeclaredType
 ParamDef(name: String, typ: Type) extends AST
 Constructor(modifs: Set[String], name: String, params: List[ParamDef], body: Block) extends ClassBodyElement
 MethodDef(modifs: Set[String], returnType: Type, name: String, params: List[ParamDef], body: Option[Block]) extends ClassBodyElement
 FieldDef(modifs: Set[String], typ: Type, name: String, value: Option[Expression]) extends ClassBodyElement
-Statement extends AST
+abstract Statement extends AST
 Block(statements: List[Statement]) extends Statement
 VarDef(typ: Type, name: String, value: Option[Expression]) extends Statement
 Assignment(lhs: Expression, rhs: Expression) extends Statement
@@ -21,8 +21,8 @@ Switch(expression: Expression, groups: List[(Literal, Block)], default: Option[B
 Return(expression: Option[Expression]) extends Statement
 Throw(expression: Expression) extends Statement
 ConstructorCall(signature: Signature, params: List[Expression]) extends Statement
-Expression extends Statement
-Literal extends Expression
+abstract Expression extends Statement
+abstract Literal extends Expression
 BooleanLiteral(v: Boolean) extends Literal
 CharLiteral(v: Char) extends Literal
 DoubleLiteral(v: Double) extends Literal
@@ -45,7 +45,7 @@ Cast(on: Expression, typ: Type) extends Expression
 ClassOf(typ: Type) extends Expression
 FieldRef(on: Expression, onType: Type, name: String) extends Expression
 StaticFieldRef(on: Ref, name: String) extends Expression
-BinaryOp(symbol: String) extends Expression
+abstract BinaryOp(symbol: String) extends Expression
 Multiply(lhs: Expression, rhs: Expression) extends BinaryOp
 Divide(lhs: Expression, rhs: Expression) extends BinaryOp
 Modulus(lhs: Expression, rhs: Expression) extends BinaryOp
@@ -65,14 +65,14 @@ BitUnsignedRShift(lhs: Expression, rhs: Expression) extends BinaryOp
 BitAnd(lhs: Expression, rhs: Expression) extends BinaryOp
 BitXor(lhs: Expression, rhs: Expression) extends BinaryOp
 BitOr(lhs: Expression, rhs: Expression) extends BinaryOp
-UnaryOp(symbol: String) extends Expression
+abstract UnaryOp(symbol: String) extends Expression
 Not(expression: Expression) extends UnaryOp
 UnaryMinus(expression: Expression) extends UnaryOp
 BitNot(expression: Expression) extends UnaryOp
 ArrayRef(on: Expression, index: Expression) extends Expression
 NewArray(typ: Type, dims: List[Option[Expression]]) extends Expression
 ArrayLength(on: Expression) extends Expression
-Type extends AST
+abstract Type extends AST
 Ref(pkg: Option[Package], name: String) extends Type
 Primitive(name: String) extends Type
 Array(typ: Type) extends Type
